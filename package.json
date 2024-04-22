@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://patrick-dolan.github.io/audiophile/",
+  "homepage": "https://patrick-dolan.github.io/audiophile-ecommerce-website/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
