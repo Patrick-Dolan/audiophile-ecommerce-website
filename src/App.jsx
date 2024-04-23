@@ -1,15 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navigation/Navbar";
 
 function App() {
   return (
     <>
-      <header className="mx-6">
-        <h1 className="text-center">Audiophile site</h1>
-      </header>
-      <div className="mx-6">
+      <header>
         <Navbar />
-      </div>
+      </header>
       <main className="mx-6">
         <Routes>
           <Route path="/audiophile-ecommerce-website/" element={<h1>Home</h1>} />
