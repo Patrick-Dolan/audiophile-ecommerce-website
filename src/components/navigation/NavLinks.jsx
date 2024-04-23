@@ -26,7 +26,7 @@ function NavLinks({ mobileNavOpen, closeMobileNav, className}) {
 
   return (
     <div className={`${className} ${mobileNavOpen ? "" : "hidden"} overflow-y-auto max-h-screen`}>
-      <ul className={`uppercase px-6 py-8 bg-white rounded-b-md space-y-4 pb-30`}>
+      <ul className={`uppercase px-6 py-8 bg-white rounded-b-md space-y-8 pb-30`}>
         {links.map((link, index) => (
           <li key={index}>
             <MainNavLinkCard linkObj={link} handleClose={closeMobileNav} />
