@@ -20,7 +20,7 @@ body {
 
 p {
   font-size: 15px;
-  line-spacing: 25px;
+  line-height: 25px;
   font-weight: medium;
 }
 
@@ -31,36 +31,36 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25rem;
-  line-spacing: 3.625rem;
-  character-spacing: 0.125rem;
+  line-height: 3.625rem;
+  letter-spacing: 0.125rem;
 }
 
 h2 {
   font-size: 1.75rem;
-  line-spacing: 2.75rem;
-  character-spacing: 0.094rem;
+  line-height: 2.75rem;
+  letter-spacing: 0.094rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  line-spacing: 2.25rem;
-  character-spacing: 0.072rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.072rem;
 }
 
 h4 {
   font-size: 1.75rem;
-  line-spacing: 2.375rem;
-  character-spacing: 0.125rem;
+  line-height: 2.375rem;
+  letter-spacing: 0.125rem;
 }
 
 h5 {
   font-size: 1.5rem;
-  line-spacing: 2.063rem;
-  character-spacing: 0.106rem;
+  line-height: 2.063rem;
+  letter-spacing: 0.106rem;
 }
 
 h6 {
   font-size: 1.125rem;
-  line-spacing: 1.5rem;
-  character-spacing: 0.081rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.081rem;
 }
