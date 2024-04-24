@@ -1,13 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navigation/Navbar";
+import Footer from "./components/shared/Footer";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <header>
         <Navbar />
       </header>
-      <main className="mx-6">
+      <main className="flex-grow overflow-auto">
         <Routes>
           <Route path="/audiophile-ecommerce-website/" element={<h1>Home</h1>} />
           <Route path="/audiophile-ecommerce-website/category/headphones" element={<h1>headphones</h1>} />
@@ -17,7 +18,10 @@ function App() {
           <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </main>
-    </>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }
 
