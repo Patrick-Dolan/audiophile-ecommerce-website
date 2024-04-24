@@ -21,7 +21,7 @@ body {
 p {
   font-size: 15px;
   line-height: 25px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25rem;
-  line-height: 3.625rem;
+  line-height: 2.5rem;
   letter-spacing: 0.125rem;
 }
 
