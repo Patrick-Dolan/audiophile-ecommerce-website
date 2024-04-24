@@ -10,7 +10,9 @@ function Footer() {
       <div className="bg-black text-white text-center pb-9.5">
         <ContentWrapper>
           <div className="space-y-12">
-            <img src="/audiophile-ecommerce-website/shared/desktop/logo.svg" alt="audiophile logo" className="block mx-auto pt-12" />
+            <Link to="/audiophile-ecommerce-website/">
+              <img src="/audiophile-ecommerce-website/shared/desktop/logo.svg" alt="audiophile logo" className="block mx-auto pt-12" />
+            </Link>
             <ul className="font-bold text-13 tracking-2px uppercase leading-normal space-y-4">
               <li><Link to="/audiophile-ecommerce-website/">Home</Link></li>
               <li><Link to="/audiophile-ecommerce-website/category/headphones">Headphones</Link></li>
