@@ -1,12 +1,14 @@
+import HomepageHero from "../homepage/HomepageHero"
 import ContentWrapper from "../shared/ContentWrapper"
 import MarketingCard from "../shared/MarketingCard"
 
 function HomePage() {
   return (
     <>
-      <h1>Home Page</h1>
+      <div className="mb-10">
+        <HomepageHero />
+      </div>
       <ContentWrapper>
-        <p>This is the home page content</p>
         <MarketingCard />
       </ContentWrapper>
     </>
