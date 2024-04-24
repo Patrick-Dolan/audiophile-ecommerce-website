@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ContentWrapper from "../pages/ContentWrapper"
+import ContentWrapper from "./ContentWrapper"
 
 function Footer() {
   return (
