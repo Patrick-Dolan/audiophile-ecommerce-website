@@ -14,10 +14,10 @@ export default {
         "off-white": "#FAFAFA",
       },
       spacing : {
-        "9.5": "2.375rem",
-        "22.5": "5.625em",
-        "25": "6.25rem",
-        "30": "7.5rem",
+        "9.5": "2.375rem", // 38px @ 16px base
+        "22.5": "5.625em", // 90px @ 16px base
+        "25": "6.25rem", // 100px @ 16px base
+        "30": "7.5rem", // 120px @ 16px base
       },
       fontSize: {
         "13": "0.8125rem", // 13px @ 16px base
