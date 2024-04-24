@@ -3,7 +3,7 @@ import ContentWrapper from "./ContentWrapper"
 
 function Footer() {
   return (
-    <footer className="mt-30">
+    <footer>
       {/* Decorative bar */}
       <div className="h-1 bg-black"><div className="w-25 bg-primary h-1 mx-auto"></div></div>
       {/* Footer content */}
