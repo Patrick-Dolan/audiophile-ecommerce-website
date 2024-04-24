@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`w-full bg-black z-30 ${show ? 'fixed' : 'hidden'} ${mobileNavOpen ? "rounded-b-md" : ""}`}>
+      <nav className={`w-full z-30 fixed ${show ? 'fixed' : 'hidden'} ${mobileNavOpen ? "rounded-b-md" : ""} ${location.pathname === "/audiophile-ecommerce-website/" && scrollPos === 0 ? "bg-transparent" : "bg-black"}`}>
         <div className="flex justify-between items-center px-6 min-h-22.5 border-b border-white border-opacity-10">
           <button onClick={mobileNavOpen ? closeMobileNav : openMobileNav}>
             <img src="/audiophile-ecommerce-website/shared/tablet/icon-hamburger.svg" alt="Hamburger icon for navigation menu." />
@@ -53,7 +53,7 @@ function Navbar() {
       </nav>
       <div onClick={closeMobileNav} className={`fixed inset-0 bg-black opacity-40 z-20 ${mobileNavOpen ? "" : "hidden"}`}></div>
       {/* Following div is designed to push elements down below fixed nav height */}
-      <div className="min-h-22.5"></div>
+      {location.pathname !== "/audiophile-ecommerce-website/" && <div className="min-h-22.5"></div>}
     </>
   )
 }
