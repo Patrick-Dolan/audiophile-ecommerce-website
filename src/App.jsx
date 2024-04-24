@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navigation/Navbar";
+import HomePage from "./components/pages/HomePage";
 import Footer from "./components/shared/Footer";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       </header>
       <main className="flex-grow overflow-auto">
         <Routes>
-          <Route path="/audiophile-ecommerce-website/" element={<h1>Home</h1>} />
+          <Route path="/audiophile-ecommerce-website/" element={<HomePage />} />
           <Route path="/audiophile-ecommerce-website/category/headphones" element={<h1>headphones</h1>} />
           <Route path="/audiophile-ecommerce-website/category/speakers" element={<h1>speakers</h1>} />
           <Route path="/audiophile-ecommerce-website/category/earphones" element={<h1>earphones</h1>} />
