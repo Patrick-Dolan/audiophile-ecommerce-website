@@ -2,7 +2,7 @@
 import MainNavLinkCard from "./MainNavLinkCard"
 import PropTypes from "prop-types"
 
-function NavLinks({ mobileNavOpen, closeMobileNav, className}) {
+function NavLinks({ handleMobileNav, className}) {
   const links = [
     {
       title: "headphones",
@@ -25,11 +25,11 @@ function NavLinks({ mobileNavOpen, closeMobileNav, className}) {
   ];
 
   return (
-    <div className={`${className} ${mobileNavOpen ? "" : "hidden"} overflow-y-auto max-h-screen`}>
+    <div className={`${className} ${handleMobileNav && "overflow-y-auto max-h-screen"}`}>
       <ul className={`uppercase px-6 py-8 bg-white rounded-b-md space-y-8 pb-30`}>
         {links.map((link, index) => (
           <li key={index}>
-            <MainNavLinkCard linkObj={link} handleClose={closeMobileNav} />
+            <MainNavLinkCard linkObj={link} handleLinkClick={handleMobileNav} />
           </li>
         ))}
       </ul>
@@ -38,8 +38,7 @@ function NavLinks({ mobileNavOpen, closeMobileNav, className}) {
 }
 
 NavLinks.propTypes = {
-  mobileNavOpen: PropTypes.bool.isRequired,
-  closeMobileNav: PropTypes.func.isRequired,
+  handleMobileNav: PropTypes.func,
   className: PropTypes.string,
 }
 
