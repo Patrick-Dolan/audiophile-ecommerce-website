@@ -26,7 +26,7 @@ function NavLinks({ handleMobileNav, className}) {
 
   return (
     <div className={`${className} ${handleMobileNav && "overflow-y-auto max-h-screen pb-30"}`}>
-      <ul className={`uppercase px-6 py-8 bg-white rounded-b-md space-y-8 `}>
+      <ul className={`uppercase px-6 py-8 bg-white rounded-b-md space-y-4 `}>
         {links.map((link, index) => (
           <li key={index}>
             <MainNavLinkCard linkObj={link} handleLinkClick={handleMobileNav} />
