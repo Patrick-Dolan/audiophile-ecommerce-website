@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 
-function MainNavLinkCard({ linkObj, handleClose }) {
+function MainNavLinkCard({ linkObj, handleLinkClick }) {
   const { imgSrc, alt, title, link } = linkObj;
 
   return (
-    <Link to={link} onClick={handleClose}>
+    <Link to={link} onClick={handleLinkClick}>
       <div className="min-h-16"></div>
       <div className="bg-off-grey rounded-lg relative">
         <div className="min-h-20"></div>
@@ -24,7 +24,7 @@ function MainNavLinkCard({ linkObj, handleClose }) {
 
 MainNavLinkCard.propTypes = {
   linkObj: PropTypes.object.isRequired,
-  handleClose: PropTypes.func.isRequired,
+  handleLinkClick: PropTypes.func,
 }
 
 export default MainNavLinkCard
