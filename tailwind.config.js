@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode: 'jit',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,6 +9,13 @@ export default {
     extend: {
       backgroundImage: {
         "sm-home-hero": "url('/audiophile-ecommerce-website/home/mobile/image-header.jpg')",
+        "sm-featured-product": "url('/audiophile-ecommerce-website/home/desktop/pattern-circles.svg')",
+      },
+      backgroundPosition: {
+        "sm-featured-product-pos": "50% -120px",
+      },
+      backgroundSize: {
+        "sm-featured-product-size": "170% auto",
       },
       colors: {
         "primary": "#D87D4a",
@@ -18,6 +26,7 @@ export default {
       },
       spacing : {
         "9.5": "2.375rem", // 38px @ 16px base
+        "14": "3.5rem", // 56px @ 16px base
         "22": "5.5rem", // 88px @ 16px base
         "22.5": "5.625em", // 90px @ 16px base
         "25": "6.25rem", // 100px @ 16px base
@@ -25,6 +34,7 @@ export default {
         "28": "7rem", // 112px @ 16px base
         "30": "7.5rem", // 120px @ 16px base
         "40": "10rem", // 160px @ 16px base
+        "43": "10.75rem", // 172px @ 16px base
       },
       fontSize: {
         "13": "0.8125rem", // 13px @ 16px base
