@@ -18,6 +18,7 @@ export default {
       },
       spacing : {
         "9.5": "2.375rem", // 38px @ 16px base
+        "22": "5.5rem", // 88px @ 16px base
         "22.5": "5.625em", // 90px @ 16px base
         "25": "6.25rem", // 100px @ 16px base
         "27": "6.75rem", // 108px @ 16px base
