@@ -10,6 +10,9 @@ function Button({ text, type, onClick, variant = "primary"}) {
     case "secondary":
       styles = "text-black bg-white border border-black border-inset hover:bg-black hover:text-white"
       break
+    case "tertiary":
+      styles = "text-white bg-black border border-black border-inset hover:bg-gray-600 hover:border-gray-600"
+      break
     default:
       styles = "text-white bg-primary"
   }
