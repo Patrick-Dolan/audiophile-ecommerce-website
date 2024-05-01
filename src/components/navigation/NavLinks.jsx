@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom"
 import MainNavLinkCard from "./MainNavLinkCard"
 import PropTypes from "prop-types"
 
@@ -24,14 +23,16 @@ function NavLinks({ handleMobileNav, className}) {
     }
   ];
 
+  const componentInMobileNav = handleMobileNav !== undefined;
+
   return (
-    <div className={`${className} ${handleMobileNav && "overflow-y-auto max-h-screen pb-30"}`}>
-      <ul className={`uppercase px-6 py-8 bg-white rounded-b-md space-y-4 `}>
+    <div className={`${className} ${componentInMobileNav && "overflow-y-auto max-h-screen pb-30"}`}>
+      <ul className={`uppercase py-8 bg-white space-y-4 ${componentInMobileNav && "px-6 rounded-b-md"}`}>
         {links.map((link, index) => (
           <li key={index}>
             <MainNavLinkCard linkObj={link} handleLinkClick={handleMobileNav} />
           </li>
-        ))}
+          ))}
       </ul>
     </div>
   )
