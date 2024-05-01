@@ -13,6 +13,9 @@ function Button({ text, type, onClick, variant = "primary"}) {
     case "tertiary":
       styles = "text-white bg-black border border-black border-inset hover:bg-gray-600 hover:border-gray-600"
       break
+    case "transparent":
+      styles = "text-black bg-transparent border border-black border-inset hover:bg-black hover:text-white"
+      break
     default:
       styles = "text-white bg-primary"
   }
