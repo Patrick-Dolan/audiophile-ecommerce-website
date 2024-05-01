@@ -3,6 +3,7 @@ import ContentWrapper from "../shared/ContentWrapper"
 import MarketingCard from "../shared/MarketingCard"
 import NavLinks from "../navigation/NavLinks"
 import FeaturedProductCard from "../homepage/FeaturedProductCard"
+import PrimaryProductCard from "../homepage/PrimaryProductCard"
 
 function HomePage() {
   return (
@@ -15,7 +16,7 @@ function HomePage() {
         <div className="space-y-30 mb-30">
           <div className="space-y-6">
             <FeaturedProductCard />
-            <h1 className="text-center">Card 2 placeholder</h1>
+            <PrimaryProductCard />
             <h1 className="text-center">Card 3 placeholder</h1>
           </div>
           <MarketingCard />
