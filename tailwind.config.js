@@ -10,6 +10,7 @@ export default {
       backgroundImage: {
         "sm-home-hero": "url('/audiophile-ecommerce-website/home/mobile/image-header.jpg')",
         "sm-featured-product": "url('/audiophile-ecommerce-website/home/desktop/pattern-circles.svg')",
+        "sm-primary-product": "url('/audiophile-ecommerce-website/home/mobile/image-speaker-zx7.jpg')",
       },
       backgroundPosition: {
         "sm-featured-product-pos": "50% -120px",
