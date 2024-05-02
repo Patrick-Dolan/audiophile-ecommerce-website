@@ -10,8 +10,10 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPos(document.body.getBoundingClientRect().top);
-      setShowNavBar(document.body.getBoundingClientRect().top > scrollPos);
+      setTimeout(() => {
+        setScrollPos(document.body.getBoundingClientRect().top);
+        setShowNavBar(document.body.getBoundingClientRect().top > scrollPos);
+      }, 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -22,8 +24,8 @@ function Navbar() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setScrollPos(0);
   }, [location.pathname]);
-
 
   const openMobileNav = () => {
     document.body.style.overflow = 'hidden';
@@ -40,8 +42,8 @@ function Navbar() {
   } else {
     return (
       <>
-        <nav className={`w-full z-30 fixed ${mobileNavOpen ? "rounded-b-md" : ""} ${location.pathname === "/audiophile-ecommerce-website/" && scrollPos === 0 ? "bg-transparent" : "bg-black"}`}>
-          <div className="flex justify-between items-center px-6 min-h-22.5 border-b border-white border-opacity-10">
+        <nav className={`w-full z-30 fixed ${mobileNavOpen ? "rounded-b-md" : ""} `}>
+          <div className={`flex justify-between items-center px-6 min-h-22.5 border-b border-white border-opacity-10 ${location.pathname === "/audiophile-ecommerce-website/" && scrollPos === 0 ? "bg-transparent" : "bg-black"}`}>
             <button onClick={mobileNavOpen ? closeMobileNav : openMobileNav}>
               <img src="/audiophile-ecommerce-website/shared/tablet/icon-hamburger.svg" alt="Hamburger icon for navigation menu." />
             </button>
@@ -55,8 +57,6 @@ function Navbar() {
           {mobileNavOpen && <NavLinks handleMobileNav={closeMobileNav} />}
         </nav>
         <div onClick={closeMobileNav} className={`fixed inset-0 bg-black opacity-40 z-20 ${mobileNavOpen ? "" : "hidden"}`}></div>
-        {/* Following div is designed to push elements down below fixed nav height */}
-        {location.pathname !== "/audiophile-ecommerce-website/" && <div className="min-h-22.5"></div>}
       </>
     )
   }
