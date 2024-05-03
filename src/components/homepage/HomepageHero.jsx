@@ -1,5 +1,6 @@
 import ContentWrapper from "../shared/ContentWrapper"
 import Button from "../shared/Button"
+import { Link } from "react-router-dom"
 
 function HomepageHero() {
   return (
@@ -9,7 +10,9 @@ function HomepageHero() {
           <p className="text-14 uppercase leading-19 tracking-10px opacity-50 mb-4">New product</p>
           <h1 className="mb-6">XX99 Mark II Headphones</h1>
           <p className="opacity-75 mb-7">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-          <Button text="See Product" type="button" />
+          <Link to="/audiophile-ecommerce-website/product/4">
+            <Button text="See Product" type="button" />
+          </Link>
         </div>
       </ContentWrapper>
     </div>
