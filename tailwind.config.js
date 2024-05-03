@@ -19,13 +19,14 @@ export default {
         "sm-featured-product-size": "170% auto",
       },
       colors: {
-        "primary": "#D87D4a",
+        "primary": "#D87D4A",
         "primary-light": "#FBAF85",
         "off-black": "#101010",
         "off-grey": "#F1F1F1",
         "off-white": "#FAFAFA",
       },
       spacing : {
+        "7.5": "1.875rem", // 30px @ 16px base
         "9.5": "2.375rem", // 38px @ 16px base
         "14": "3.5rem", // 56px @ 16px base
         "22": "5.5rem", // 88px @ 16px base
