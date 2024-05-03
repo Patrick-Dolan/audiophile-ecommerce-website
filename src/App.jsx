@@ -19,7 +19,7 @@ function App() {
       <main className="flex-grow overflow-auto">
         <Routes>
           <Route path="/audiophile-ecommerce-website/" element={<HomePage />} />
-          <Route path="/audiophile-ecommerce-website/product/:id" element={<ProductDetailsPage />} />
+          <Route path="/audiophile-ecommerce-website/product/:slug" element={<ProductDetailsPage />} />
           <Route path="/audiophile-ecommerce-website/category/headphones" element={<h1>headphones</h1>} />
           <Route path="/audiophile-ecommerce-website/category/speakers" element={<h1>speakers</h1>} />
           <Route path="/audiophile-ecommerce-website/category/earphones" element={<h1>earphones</h1>} />
