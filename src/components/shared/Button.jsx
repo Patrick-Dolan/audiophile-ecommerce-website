@@ -22,7 +22,7 @@ function Button({ text, type, onClick, variant = "primary"}) {
 
   return (
     <button 
-      className={`uppercase tracking-1px font-bold min-w-40 text-13 py-4 ${styles}`} 
+      className={`uppercase tracking-1px font-bold min-w-40 text-13 py-4 max-h-12 ${styles}`} 
       type={type} 
       onClick={onClick}
     >
