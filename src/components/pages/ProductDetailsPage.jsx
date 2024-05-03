@@ -2,10 +2,10 @@ import ContentWrapper from "../shared/ContentWrapper";
 import NavLinks from "../navigation/NavLinks";
 import MarketingCard from "../shared/MarketingCard";
 import ProductInformation from "../products/ProductInformation";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ProductDetailsPage() {
-  const { navigate } = useNavigate();
+  const navigate = useNavigate();
 
   function handleGoBack() {
     navigate(-1);
@@ -14,7 +14,7 @@ function ProductDetailsPage() {
   return (
     <ContentWrapper>
       <div className="mt-4 mb-6">
-        <Link onClick={handleGoBack} className="opacity-50 text-15">Go Back</Link>
+        <button onClick={handleGoBack} className="opacity-50 text-15">Go Back</button>
       </div>
       <div className="space-y-30">
         <ProductInformation />
