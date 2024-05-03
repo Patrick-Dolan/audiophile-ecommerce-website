@@ -1,12 +1,9 @@
 import { useState } from 'react'
-import products from '../../data.js'
-import { useParams } from 'react-router-dom'
-import Button from '../shared/Button.jsx';
+import Button from '../shared/Button.jsx'
+import PropTypes from 'prop-types'
 
-function ProductInformation() {
-  const { slug } = useParams();
+function ProductInformation({ product }) {
   const [counter, setCounter] = useState(1);
-  const product = products.find((product) => product.slug === slug);
 
   const formatPrice = (price) => {
     const formattedPrice = new Intl.NumberFormat("en-US", {
@@ -31,6 +28,7 @@ function ProductInformation() {
   // TODO implement add to cart functionality
   function handleAddToCart() {
     alert(`Add to cart clicked with ${counter} of the ${product.name}.`);
+    setCounter(1);
   }
 
   return (
@@ -42,7 +40,7 @@ function ProductInformation() {
         <p className="mb-6 opacity-50">{product.description}</p>
         <h6 className="mb-7.5">{formatPrice(product.price)}</h6>
         <div className="flex gap-4 items-center justify-center">
-          <div className="flex gap-4 justify-center items-center min-h-12 bg-off-grey">
+          <div className="flex gap-4 justify-center items-center min-h-12 min-w-30 bg-off-grey">
             <button onClick={decrement} className="px-4 py-2 h-full opacity-25 font-bold">-</button>
             <p className="font-bold">{counter}</p>
             <button onClick={increment} className="px-4 py-2 h-full opacity-25 font-bold">+</button>
@@ -79,6 +77,10 @@ function ProductInformation() {
       </div>
     </div>
   )
+}
+
+ProductInformation.propTypes = {
+  product: PropTypes.object.isRequired
 }
 
 export default ProductInformation
