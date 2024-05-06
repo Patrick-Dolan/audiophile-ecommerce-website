@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Button from "../shared/Button"
 import ContentWrapper from "../shared/ContentWrapper"
 
@@ -7,8 +8,11 @@ function PrimaryProductCard() {
       <ContentWrapper>
         <div className="space-y-8">
           <h2>ZX7 Speaker</h2>
-          {/* TODO set button to go to product page */}
-          <Button text="See Product" type="button" variant="transparent" onClick={() => alert("Product button clicked")} />
+          <div>
+            <Link to="/audiophile-ecommerce-website/product/zx7-speaker">
+              <Button text="See Product" type="button" variant="transparent" />
+            </Link>
+          </div>
         </div>
       </ContentWrapper>
     </article>
