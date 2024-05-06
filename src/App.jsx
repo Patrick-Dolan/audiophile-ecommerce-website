@@ -3,6 +3,7 @@ import Navbar from "./components/navigation/Navbar";
 import HomePage from "./components/pages/HomePage";
 import Footer from "./components/shared/Footer";
 import ProductDetailsPage from "./components/pages/ProductDetailsPage";
+import CategoryPage from "./components/pages/CategoryPage";
 
 function App() {
   const location = useLocation();
@@ -20,11 +21,9 @@ function App() {
         <Routes>
           <Route path="/audiophile-ecommerce-website/" element={<HomePage />} />
           <Route path="/audiophile-ecommerce-website/product/:slug" element={<ProductDetailsPage />} />
-          <Route path="/audiophile-ecommerce-website/category/headphones" element={<h1>headphones</h1>} />
-          <Route path="/audiophile-ecommerce-website/category/speakers" element={<h1>speakers</h1>} />
-          <Route path="/audiophile-ecommerce-website/category/earphones" element={<h1>earphones</h1>} />
-          <Route path="/audiophile-ecommerce-website/checkout" element={<h1>checkout</h1>} />
-          <Route path="*" element={<h1>Not Found</h1>} />
+          <Route path="/audiophile-ecommerce-website/category/:category" element={<CategoryPage />} />
+          <Route path="/audiophile-ecommerce-website/checkout" element={<h1 className="text-center">checkout placeholder</h1>} />
+          <Route path="*" element={<h1 className="py-40 text-center">Page Not Found</h1>} />
         </Routes>
       </main>
       <Footer />
