@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Button from "../shared/Button"
 import ContentWrapper from "../shared/ContentWrapper"
 
@@ -12,8 +13,11 @@ function FeaturedProductCard() {
           <div className="text-center space-y-6 mt-8">
             <h1 className="max-w-40 mx-auto">ZX9 Speaker</h1>
             <p className="opacity-75">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-            {/* TODO set button to go to product page */}
-            <Button text="See Product" type="button" variant="tertiary" onClick={() => alert("Product button clicked")} />
+            <div>
+              <Link to="/audiophile-ecommerce-website/product/zx9-speaker">
+                <Button text="See Product" type="button" variant="tertiary" />
+              </Link>
+            </div>
           </div>
         </ContentWrapper>
       </div>
