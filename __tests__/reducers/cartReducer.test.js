@@ -68,4 +68,66 @@ describe("cartReducer", () => {
     expect(result.vat).toBe(60);
     expect(result.grandTotal).toBe(350);
   });
+
+  test("should remove a product from the cart when quantity hits 0", () => {
+    const action = {
+      type: "REMOVE_ONE_FROM_CART",
+      payload: newProduct,
+    };
+    const state = cartReducer(undefined, {
+      type: "ADD_TO_CART",
+      payload: newProduct,
+    });
+    const result = cartReducer(state, action);
+    expect(result.products.length).toBe(0);
+  });
+
+  test("should update the subtotal, vat, and grand total when the cart has all items removed using REMOVE_ONE_FROM_CART action type", () => {
+    const action = {
+      type: "REMOVE_ONE_FROM_CART",
+      payload: newProduct,
+    };
+    const state = cartReducer(undefined, {
+      type: "ADD_TO_CART",
+      payload: newProduct,
+    });
+    const result = cartReducer(state, action);
+    expect(result.subtotal).toBe(0);
+    expect(result.vat).toBe(0);
+    expect(result.grandTotal).toBe(50);
+  });
+
+  test("should decrease the quantity of a product in the cart when removed", () => {
+    const action = {
+      type: "REMOVE_ONE_FROM_CART",
+      payload: newProduct,
+    };
+    const state = {
+      products: [{ id: 1, price: 100, quantity: 2 }],
+      subtotal: 200,
+      vat: 40,
+      grandTotal: 250,
+      shippingCost: 50,
+    };
+    const result = cartReducer(state, action);
+    expect(result.products[0].quantity).toBe(1);
+  });
+
+  test("should remove a product from the cart and update the subtotal, vat, and grand total", () => {
+    const action = {
+      type: "REMOVE_ONE_FROM_CART",
+      payload: newProduct,
+    };
+    const state = {
+      products: [{ id: 1, price: 100, quantity: 2 }],
+      subtotal: 200,
+      vat: 40,
+      grandTotal: 250,
+      shippingCost: 50,
+    };
+    const result = cartReducer(state, action);
+    expect(result.subtotal).toBe(100);
+    expect(result.vat).toBe(20);
+    expect(result.grandTotal).toBe(150);
+  });
 });
