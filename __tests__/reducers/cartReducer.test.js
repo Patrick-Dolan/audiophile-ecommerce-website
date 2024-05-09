@@ -130,4 +130,22 @@ describe("cartReducer", () => {
     expect(result.vat).toBe(20);
     expect(result.grandTotal).toBe(150);
   });
+
+  test("should clear the cart", () => {
+    const action = {
+      type: "CLEAR_CART",
+    };
+    const state = {
+      products: [{ id: 1, price: 100, quantity: 2 }],
+      subtotal: 200,
+      vat: 40,
+      grandTotal: 250,
+      shippingCost: 50,
+    };
+    const result = cartReducer(state, action);
+    expect(result.products.length).toBe(0);
+    expect(result.subtotal).toBe(0);
+    expect(result.vat).toBe(0);
+    expect(result.grandTotal).toBe(0);
+  });
 });

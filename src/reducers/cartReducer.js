@@ -60,6 +60,9 @@ const cartReducer = (state = createInitialCartState(), action) => {
         products: updatedProducts
       };
     }
+    case constants.CLEAR_CART: {
+      return createInitialCartState();
+    }
     default:
       return state;
   }
