@@ -6,7 +6,7 @@ describe("calculateCartSubtotal", () => {
     const result = calculateCartSubtotal(cartProducts);
     expect(result).toBe(0);
   });
-  test("should return the total price of the cart", () => {
+  test("should return the subtotal price of the cart", () => {
     const cartProducts = [
       { id: 1, price: 100 },
       { id: 2, price: 200 },
