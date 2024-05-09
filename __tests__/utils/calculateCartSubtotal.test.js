@@ -1,6 +1,6 @@
 import { calculateCartSubtotal } from "../../src/reducers/utils/calculateCartSubtotal";
 
-describe("calculateTotalCartPrice", () => {
+describe("calculateCartSubtotal", () => {
   test("should return 0 if cart is empty", () => {
     const cartProducts = [];
     const result = calculateCartSubtotal(cartProducts);
