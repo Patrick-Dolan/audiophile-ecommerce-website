@@ -3,7 +3,7 @@ import { calculateGrandTotal } from "./utils/calculateGrandTotal";
 import { calculateVAT } from "./utils/calculateVAT";
 import * as constants from "../actions/actionTypes";
 
-const createInitialCartState = () => ({
+export const createInitialCartState = () => ({
   products: [],
   subtotal: 0,
   vat: 0,
@@ -11,7 +11,7 @@ const createInitialCartState = () => ({
   shippingCost: 50,
 });
 
-const cartReducer = (state = createInitialCartState(), action) => {
+export const cartReducer = (state = createInitialCartState(), action) => {
   switch (action.type) {
     case constants.ADD_TO_CART: {
       let updatedProducts = [];
@@ -67,5 +67,3 @@ const cartReducer = (state = createInitialCartState(), action) => {
       return state;
   }
 };
-
-export default cartReducer;
