@@ -7,6 +7,6 @@ export const calculateCartSubtotal = (cartProducts) => {
   if (invalidProduct !== undefined) {
     throw new Error(`Invalid price for product (id: ${invalidProduct.id})`);
   };
-
-  return cartProducts.reduce((acc, item) => acc + item.price, 0);
+  
+  return cartProducts.reduce((acc, item) => acc + item.price * item.quantity, 0);
 };
