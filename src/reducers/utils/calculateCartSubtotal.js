@@ -1,4 +1,4 @@
-export const calculateTotalCartPrice = (cartProducts) => {
+export const calculateCartSubtotal = (cartProducts) => {
   if (!cartProducts.length) return 0;
   if (cartProducts.some((item) => item === undefined || item === null)) {
     throw new Error("Undefined or null product in cart");
