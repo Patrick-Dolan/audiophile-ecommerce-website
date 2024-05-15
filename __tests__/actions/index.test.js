@@ -4,11 +4,13 @@ import * as constants from '../../src/actions/actionTypes';
 describe("actions", () => {
   test("should create an action to add a product to the cart", () => {
     const product = { id: 1, name: "Speaker", price: 100 };
+    const quantity = 1;
     const expectedAction = {
       type: constants.ADD_TO_CART,
-      payload: product
+      product: product,
+      quantity: 1,
     };
-    expect(actions.addProductToCart(product)).toEqual(expectedAction);
+    expect(actions.addProductToCart(product, quantity)).toEqual(expectedAction);
   });
   test("should create an action to remove a product from the cart", () => {
     const product = { id: 1, name: "Speaker", price: 100 };

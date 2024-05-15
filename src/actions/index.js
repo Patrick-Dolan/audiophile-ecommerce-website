@@ -1,9 +1,10 @@
 import * as constants from './actionTypes';
 
-export const addProductToCart = (product) => {
+export const addProductToCart = (product, quantity) => {
   return {
     type: constants.ADD_TO_CART,
-    payload: product
+    product: product,
+    quantity: quantity,
   }
 };
 
