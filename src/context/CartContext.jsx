@@ -1,14 +1,37 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useReducer } from "react"
+import { cartReducer, createInitialCartState} from "../reducers/cartReducer"
+import * as actions from "../actions/index"
 
 const CartContext = createContext(null)
 
 export const CartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState(["new product"]);
-  
-  // TODO write functionality for cart in functions here then
+  const [cart, dispatch] = useReducer(cartReducer, createInitialCartState());
+  console.log(cart);
+
+  function addToCart(product, quantity = 1) {
+    const action = actions.addProductToCart(product, quantity);
+    dispatch(action);
+  }
+
+  function removeFromCart(product, quantity = 1) {
+    const action = actions.removeProductFromCart(product, quantity);
+    dispatch(action);
+  }
+
+  function clearCart() {
+    const action = actions.clearCart();
+    dispatch(action);
+  }
 
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
+    <CartContext.Provider 
+      value={{ 
+        cart, 
+        addToCart, 
+        removeFromCart, 
+        clearCart 
+      }}
+    >
       {children}
     </CartContext.Provider>
   )
