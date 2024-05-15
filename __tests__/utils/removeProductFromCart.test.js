@@ -1,4 +1,4 @@
-import { removeProductFromCart } from "../../src/reducers/utils/removeProductsFromCart";
+import { removeProductFromCart } from "../../src/reducers/utils/removeProductFromCart";
 import * as actions from "../../src/actions/index";
 
 describe('removeProductFromCart', () => {

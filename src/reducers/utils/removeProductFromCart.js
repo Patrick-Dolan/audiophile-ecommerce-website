@@ -12,7 +12,7 @@ export const removeProductFromCart = (products, action) => {
     throw new Error("Invalid product. Product must have an id.");
   }
   const productFromCart = products.find(product => product.id === action.product.id);
-  if (productFromCart.quantity - action.quantity <= 1) {
+  if (productFromCart.quantity - action.quantity < 1) {
     return products.filter(product => product.id !== action.product.id);
   } else {
     return products.map(product => {
