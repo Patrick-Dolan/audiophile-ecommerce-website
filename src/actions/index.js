@@ -8,10 +8,11 @@ export const addProductToCart = (product, quantity) => {
   }
 };
 
-export const removeProductFromCart = (product) => {
+export const removeProductFromCart = (product, quantity) => {
   return {
-    type: constants.REMOVE_ONE_FROM_CART,
-    payload: product
+    type: constants.REMOVE_FROM_CART,
+    product: product,
+    quantity: quantity,
   }
 };
 
