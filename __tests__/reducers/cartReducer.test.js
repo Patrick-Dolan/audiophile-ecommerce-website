@@ -59,15 +59,15 @@ describe("cartReducer", () => {
   });
 
   test("should remove a product from the cart when quantity hits 0", () => {
-    const action = actions.removeProductFromCart(newProduct);
     const addAction = actions.addProductToCart(newProduct, 1);
     const state = cartReducer(undefined, addAction);
-    const result = cartReducer(state, action);
+    const removeAction = actions.removeProductFromCart(newProduct, 1);
+    const result = cartReducer(state, removeAction);
     expect(result.products.length).toBe(0);
   });
 
   test("should update the subtotal, vat, and grand total when the cart has all items removed using REMOVE_ONE_FROM_CART action type", () => {
-    const action = actions.removeProductFromCart(newProduct);
+    const action = actions.removeProductFromCart(newProduct, 1);
     const addAction = actions.addProductToCart(newProduct, 1);
     const state = cartReducer(undefined, addAction);
     const result = cartReducer(state, action);
@@ -77,7 +77,7 @@ describe("cartReducer", () => {
   });
 
   test("should decrease the quantity of a product in the cart when removed", () => {
-    const action = actions.removeProductFromCart(newProduct);
+    const action = actions.removeProductFromCart(newProduct, 1);
     const state = {
       products: [{ id: 1, price: 100, quantity: 2 }],
       subtotal: 200,
@@ -90,7 +90,7 @@ describe("cartReducer", () => {
   });
 
   test("should remove a product from the cart and update the subtotal, vat, and grand total", () => {
-    const action = actions.removeProductFromCart(newProduct);
+    const action = actions.removeProductFromCart(newProduct, 1);
     const state = {
       products: [{ id: 1, price: 100, quantity: 2 }],
       subtotal: 200,

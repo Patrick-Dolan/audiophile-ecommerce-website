@@ -3,6 +3,7 @@ import { calculateGrandTotal } from "./utils/calculateGrandTotal";
 import { calculateVAT } from "./utils/calculateVAT";
 import { addProductsToCart } from "./utils/addProductsToCart";
 import * as constants from "../actions/actionTypes";
+import { removeProductFromCart } from "./utils/removeProductFromCart";
 
 export const createInitialCartState = () => ({
   products: [],
@@ -32,17 +33,7 @@ export const cartReducer = (state = createInitialCartState(), action) => {
       if (productFromCart === undefined) {
         return state;
       }
-      let updatedProducts = [];
-      if (productFromCart.quantity === 1) {
-        updatedProducts = state.products.filter(product => product.id !== action.product.id);
-      } else {
-        updatedProducts = state.products.map(product => {
-          if (product.id === action.product.id) {
-            return { ...product, quantity: product.quantity - 1 };
-          }
-          return product;
-        });
-      }
+      const updatedProducts = removeProductFromCart(state.products, action);
       const updatedSubtotal = calculateCartSubtotal(updatedProducts);
       const updatedVat = calculateVAT(updatedSubtotal);
       const updatedGrandTotal = calculateGrandTotal(updatedSubtotal, state.shippingCost);
