@@ -9,6 +9,8 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
   - [The challenge](#the-challenge)
   - [Previews](#previews)
   - [Links](#links)
+- [Setup and installation instructions](#setup-and-installation-instructions)
+- [Testing](#testing)
 - [My process](#my-process)
   - [Built with](#built-with)
   <!-- - [What I learned](#what-i-learned) -->
@@ -58,6 +60,14 @@ Users should be able to:
 <!-- TODO add solution URL from Frontend mentor -->
 <!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
 - Live Site URL: [GitHub Pages Live Site](https://patrick-dolan.github.io/audiophile-ecommerce-website/)
+
+### Setup and installation instructions
+
+ADD SETUP IN AND INSTALL INSTRUCTIONS
+
+### Testing
+
+ADD TESTING INSTRUCTIONS
 
 ## My process
 
