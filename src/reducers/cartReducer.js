@@ -27,17 +27,17 @@ export const cartReducer = (state = createInitialCartState(), action) => {
         products: updatedProducts
       };
     }
-    case constants.REMOVE_ONE_FROM_CART: {
-      const productFromCart = state.products.find(product => product.id === action.payload.id);
+    case constants.REMOVE_FROM_CART: {
+      const productFromCart = state.products.find(product => product.id === action.product.id);
       if (productFromCart === undefined) {
         return state;
       }
       let updatedProducts = [];
       if (productFromCart.quantity === 1) {
-        updatedProducts = state.products.filter(product => product.id !== action.payload.id);
+        updatedProducts = state.products.filter(product => product.id !== action.product.id);
       } else {
         updatedProducts = state.products.map(product => {
-          if (product.id === action.payload.id) {
+          if (product.id === action.product.id) {
             return { ...product, quantity: product.quantity - 1 };
           }
           return product;
