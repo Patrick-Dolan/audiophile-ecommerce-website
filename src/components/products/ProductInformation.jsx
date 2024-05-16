@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useCartContext } from '../../context/CartContext.jsx'
 import Button from '../shared/Button.jsx'
 import PropTypes from 'prop-types'
 
 function ProductInformation({ product }) {
   const [counter, setCounter] = useState(1);
+  const { addToCart } = useCartContext();
 
   const formatPrice = (price) => {
     const formattedPrice = new Intl.NumberFormat("en-US", {
@@ -25,9 +27,12 @@ function ProductInformation({ product }) {
     setCounter(prev => prev - 1);
   }
 
-  // TODO implement add to cart functionality
   function handleAddToCart() {
-    alert(`Add to cart clicked with ${counter} of the ${product.name}.`);
+    try {
+      addToCart(product, counter);
+    } catch (error) {
+      console.error(error);
+    }
     setCounter(1);
   }
 
