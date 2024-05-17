@@ -26,7 +26,7 @@ function NavLinks({ handleMobileNav, className}) {
   const componentInMobileNav = handleMobileNav !== undefined;
 
   return (
-    <div className={`${className} ${componentInMobileNav && "overflow-y-auto max-h-screen pb-30"}`}>
+    <div className={`${className} ${componentInMobileNav && "overflow-y-auto max-h-[80vh]"}`}>
       <ul className={`uppercase py-8 bg-white space-y-4 ${componentInMobileNav && "px-6 rounded-b-md"}`}>
         {links.map((link, index) => (
           <li key={index}>

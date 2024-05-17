@@ -31,6 +31,7 @@ function Navbar() {
 
   const openMobileNav = () => {
     document.body.style.overflow = 'hidden';
+    setCartOpen(false);
     setMobileNavOpen(true);
   }
 
@@ -41,6 +42,7 @@ function Navbar() {
 
   const openCart = () => {
     document.body.style.overflow = 'hidden';
+    setMobileNavOpen(false);
     setCartOpen(true);
   }
 
