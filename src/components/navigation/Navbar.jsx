@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
 import NavLinks from "./NavLinks";
+import Cart from "../cart/Cart";
 
 function Navbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
+  const [cartOpen, setCartOpen] = useState(false)
   const [showNavBar, setShowNavBar] = useState(true);
   const [scrollPos, setScrollPos] = useState(0);
   const location = useLocation();
@@ -37,6 +39,21 @@ function Navbar() {
     setMobileNavOpen(false);
   }
 
+  const openCart = () => {
+    document.body.style.overflow = 'hidden';
+    setCartOpen(true);
+  }
+
+  const closeCart = () => {
+    document.body.style.overflow = 'auto';
+    setCartOpen(false);
+  }
+
+  const handleCloseOverlays = () => {
+    closeMobileNav();
+    closeCart();
+  }
+
   if (!showNavBar) {
     return null;
   } else {
@@ -50,13 +67,14 @@ function Navbar() {
             <Link to="/audiophile-ecommerce-website/" onClick={closeMobileNav}>
               <img src="/audiophile-ecommerce-website/shared/desktop/logo.svg" alt="audiophile logo." />
             </Link>
-            <button onClick={() => alert("Cart clicked")}>
+            <button onClick={cartOpen ? closeCart : openCart}>
               <img src="/audiophile-ecommerce-website/shared/desktop/icon-cart.svg" alt="Cart icon button." />
             </button>
           </div>
           {mobileNavOpen && <NavLinks handleMobileNav={closeMobileNav} />}
+          {cartOpen && <Cart closeCartOverlay={handleCloseOverlays} />}
         </nav>
-        <div onClick={closeMobileNav} className={`fixed inset-0 bg-black opacity-40 z-20 ${mobileNavOpen ? "" : "hidden"}`}></div>
+        <div onClick={handleCloseOverlays} className={`fixed inset-0 bg-black opacity-40 z-20 ${mobileNavOpen || cartOpen ? "" : "hidden"}`}></div>
       </>
     )
   }
