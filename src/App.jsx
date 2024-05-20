@@ -4,6 +4,7 @@ import HomePage from "./components/pages/HomePage";
 import Footer from "./components/shared/Footer";
 import ProductDetailsPage from "./components/pages/ProductDetailsPage";
 import CategoryPage from "./components/pages/CategoryPage";
+import CheckoutPage from "./components/pages/CheckoutPage";
 
 function App() {
   const location = useLocation();
@@ -22,7 +23,7 @@ function App() {
           <Route path="/audiophile-ecommerce-website/" element={<HomePage />} />
           <Route path="/audiophile-ecommerce-website/product/:slug" element={<ProductDetailsPage />} />
           <Route path="/audiophile-ecommerce-website/category/:category" element={<CategoryPage />} />
-          <Route path="/audiophile-ecommerce-website/checkout" element={<h1 className="text-center">checkout placeholder</h1>} />
+          <Route path="/audiophile-ecommerce-website/checkout" element={<CheckoutPage />} />
           <Route path="*" element={<h1 className="py-40 text-center">Page Not Found</h1>} />
         </Routes>
       </main>
