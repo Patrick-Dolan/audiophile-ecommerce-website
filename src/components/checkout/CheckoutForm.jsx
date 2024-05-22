@@ -15,7 +15,50 @@ function CheckoutForm() {
     zip: "",
     city: "",
     country: "",
+    paymentType: "e-money",
+    eMoneyNumber: "",
+    eMoneyPin: "",
   });
+  const [errors, setErrors] = useState({});
+
+  const passesFormValidation = () => {
+    const newErrors = {};
+    if (!form.name || form.name.length === 0) {
+      newErrors.name = "Required";
+    }
+    if (!form.email || form.email.length === 0) {
+      newErrors.email = "Required";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Wrong format";
+    }
+    if (!form.phone || form.phone.length === 0) {
+      newErrors.phone = "Required";
+    }
+    if (!form.address || form.address.length === 0) {
+      newErrors.address = "Required";
+    }
+    if (!form.zip || form.zip.length === 0) {
+      newErrors.zip = "Required";
+    } else if (!/^\d{5}$/.test(form.zip)) {
+      newErrors.zip = "Invalid Zip Code";
+    }
+    if (!form.city || form.city.length === 0) {
+      newErrors.city = "Required";
+    }
+    if (!form.country || form.country.length === 0) {
+      newErrors.country = "Required";
+    }
+    if (paymentType === "e-money") {
+      if (!form.eMoneyNumber || form.eMoneyNumber.length === 0) {
+        newErrors.eMoneyNumber = "Required";
+      }
+      if (!form.eMoneyPin || form.eMoneyPin.length === 0) {
+        newErrors.eMoneyPin = "Required";
+      }
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const formatPrice = (price) => {
     const formattedPrice = new Intl.NumberFormat("en-US", {
@@ -42,12 +85,14 @@ function CheckoutForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validForm = passesFormValidation();
+    if (!validForm) return;
     console.log("Form submitted", form);
   }
 
   return (
     <ContentWrapper>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <div className="mb-8 mt-6">
           <h2 className="mb-8">Checkout</h2>
           <p className="text-primary uppercase text-13 font-bold tracking-1px mb-4">Billing Details</p>
@@ -57,8 +102,9 @@ function CheckoutForm() {
               name="name"
               type="text"
               placeholder="Alexei Ward"
-              required={true}
               onChange={handleInputChange}
+              error={errors.name ? true : false}
+              errorMessage={errors.name}
             />
             <InputField
               label="Email Address"
@@ -66,6 +112,8 @@ function CheckoutForm() {
               type="email"
               placeholder="alexei@mail.com"
               onChange={handleInputChange}
+              error={errors.email ? true : false}
+              errorMessage={errors.email}
             />
             <InputField
               label="Phone Number"
@@ -73,6 +121,8 @@ function CheckoutForm() {
               type="tel"
               placeholder="+1 202-555-0136"
               onChange={handleInputChange}
+              error={errors.phone ? true : false}
+              errorMessage={errors.phone}
             />
           </div>
           <p className="text-primary uppercase text-13 font-bold tracking-1px mb-4">Shipping info</p>
@@ -83,6 +133,8 @@ function CheckoutForm() {
               type="text"
               placeholder="1137 Williams Avenue"
               onChange={handleInputChange}
+              error={errors.address ? true : false}
+              errorMessage={errors.address}
             />
             <InputField
               label="ZIP Code"
@@ -90,6 +142,8 @@ function CheckoutForm() {
               type="number"
               placeholder="10001"
               onChange={handleInputChange}
+              error={errors.zip ? true : false}
+              errorMessage={errors.zip}
             />
             <InputField
               label="City"
@@ -97,12 +151,17 @@ function CheckoutForm() {
               type="text"
               placeholder="New York"
               onChange={handleInputChange}
+              error={errors.city ? true : false}
+              errorMessage={errors.city}
             />
             <InputField
               label="Country"
+              name="country"
               type="text"
               placeholder="United States"
               onChange={handleInputChange}
+              error={errors.country ? true : false}
+              errorMessage={errors.country}
             />
           </div>
           <div className="pb-8">
@@ -121,17 +180,21 @@ function CheckoutForm() {
               <div className="space-y-6 mb-8">
                 <InputField
                   label="e-Money Number"
-                  name="e-money-number"
+                  name="eMoneyNumber"
                   type="text"
                   placeholder="238521993"
                   onChange={handleInputChange}
+                  error={errors.eMoneyNumber ? true : false}
+                  errorMessage={errors.eMoneyNumber}
                 />
                 <InputField
                   label="e-Money PIN"
-                  name="e-money-pin"
+                  name="eMoneyPin"
                   type="number"
                   placeholder="6891"
                   onChange={handleInputChange}
+                  error={errors.eMoneyPin ? true : false}
+                  errorMessage={errors.eMoneyPin}
                 />
               </div>
             )}
