@@ -24,8 +24,9 @@ export default {
         "off-black": "#101010",
         "off-grey": "#F1F1F1",
         "off-white": "#FAFAFA",
+        "error": "#CD2C2C",
       },
-      spacing : {
+      spacing: {
         "7.5": "1.875rem", // 30px @ 16px base
         "9.5": "2.375rem", // 38px @ 16px base
         "14": "3.5rem", // 56px @ 16px base
@@ -44,7 +45,7 @@ export default {
       fontSize: {
         "13": "0.8125rem", // 13px @ 16px base
         "14": "0.875rem", // 14px @ 16px base
-        "15":"0.938rem", // 15px @ 16px base
+        "15": "0.938rem", // 15px @ 16px base
       },
       letterSpacing: {
         "1px": "1px",
