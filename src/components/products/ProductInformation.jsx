@@ -47,7 +47,7 @@ function ProductInformation({ product }) {
         <div className="flex gap-4 items-center justify-center">
           <div className="flex gap-4 justify-center items-center min-h-12 min-w-30 bg-off-grey">
             <button onClick={decrement} className="px-4 py-2 h-full opacity-25 font-bold">-</button>
-            <p className="font-bold">{counter}</p>
+            <p className="font-bold tabular-nums">{counter}</p>
             <button onClick={increment} className="px-4 py-2 h-full opacity-25 font-bold">+</button>
           </div>
           <Button text="Add to Cart" type="button" onClick={handleAddToCart} />
