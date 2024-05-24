@@ -2,20 +2,11 @@ import { useState } from 'react'
 import { useCartContext } from '../../context/CartContext.jsx'
 import Button from '../shared/Button.jsx'
 import PropTypes from 'prop-types'
+import formatPrice from '../utils/formatPrice.js'
 
 function ProductInformation({ product }) {
   const [counter, setCounter] = useState(1);
   const { addToCart } = useCartContext();
-
-  const formatPrice = (price) => {
-    const formattedPrice = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
-    }).format(price);
-    return formattedPrice;
-  }
 
   function increment() {
     if (counter === 99) return;

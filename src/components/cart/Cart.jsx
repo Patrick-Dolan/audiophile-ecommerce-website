@@ -3,20 +3,11 @@ import { useNavigate } from "react-router"
 import PropTypes from 'prop-types'
 import Button from "../shared/Button"
 import ContentWrapper from "../shared/ContentWrapper"
+import formatPrice from "../utils/formatPrice"
 
 function Cart({ closeCartOverlay }) {
   const { cart, clearCart, addToCart, removeFromCart } = useCartContext();
   const navigate = useNavigate();
-
-  const formatPrice = (price) => {
-    const formattedPrice = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
-    }).format(price);
-    return formattedPrice;
-  }
 
   const handleCheckoutNavigation = () => {
     closeCartOverlay();

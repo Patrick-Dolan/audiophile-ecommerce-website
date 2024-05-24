@@ -4,6 +4,7 @@ import { useCartContext } from "../../context/CartContext"
 import PropTypes from "prop-types"
 import Button from "../shared/Button"
 import ContentWrapper from "../shared/ContentWrapper"
+import formatPrice from "../utils/formatPrice"
 
 function OrderCompleteModal({ modalOpen, setModalOpen }) {
   const { cart } = useCartContext();
@@ -18,16 +19,6 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
       document.body.style.overflow = 'auto';
     };
   }, [modalOpen]);
-
-  const formatPrice = (price) => {
-    const formattedPrice = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
-    }).format(price);
-    return formattedPrice;
-  }
 
   const navigateToHome = () => {
     document.body.style.overflow = 'auto';

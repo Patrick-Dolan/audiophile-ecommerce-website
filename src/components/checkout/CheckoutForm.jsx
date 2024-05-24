@@ -4,6 +4,7 @@ import { useCartContext } from "../../context/CartContext"
 import ContentWrapper from "../shared/ContentWrapper"
 import Button from "../shared/Button";
 import InputField from "../shared/InputField";
+import formatPrice from "../utils/formatPrice";
 
 function CheckoutForm({ openOrderCompleteModal }) {
   const { cart } = useCartContext();
@@ -60,16 +61,6 @@ function CheckoutForm({ openOrderCompleteModal }) {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
-  const formatPrice = (price) => {
-    const formattedPrice = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
-    }).format(price);
-    return formattedPrice;
-  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
