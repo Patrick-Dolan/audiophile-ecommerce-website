@@ -1,10 +1,11 @@
 import { useState } from "react"
-import ContentWrapper from "../shared/ContentWrapper"
+import PropTypes from "prop-types"
 import { useCartContext } from "../../context/CartContext"
+import ContentWrapper from "../shared/ContentWrapper"
 import Button from "../shared/Button";
 import InputField from "../shared/InputField";
 
-function CheckoutForm() {
+function CheckoutForm({ openOrderCompleteModal }) {
   const { cart } = useCartContext();
   const [paymentType, setPaymentType] = useState("e-money");
   const [form, setForm] = useState({
@@ -87,7 +88,7 @@ function CheckoutForm() {
     e.preventDefault();
     const validForm = passesFormValidation();
     if (!validForm) return;
-    console.log("Form submitted", form);
+    openOrderCompleteModal();
   }
 
   return (
@@ -245,6 +246,10 @@ function CheckoutForm() {
       </form>
     </ContentWrapper>
   )
+}
+
+CheckoutForm.propTypes = {
+  openOrderCompleteModal: PropTypes.func.isRequired,
 }
 
 export default CheckoutForm
