@@ -86,6 +86,7 @@ function CheckoutForm({ openOrderCompleteModal }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (cart.products.length === 0) return;
     const validForm = passesFormValidation();
     if (!validForm) return;
     openOrderCompleteModal();
