@@ -43,6 +43,7 @@ export default {
         "43": "10.75rem", // 172px @ 16px base
         "50": "12.5rem", // 200px @ 16px base
         "56": "14rem", // 224px @ 16px base
+        "87": "21.75rem", // 348px @ 16px base
         "95": "23.75rem", // 380px @ 16px base
         "182": "45.5rem", // 728px @ 16px base
       },
@@ -50,6 +51,7 @@ export default {
         "13px": "13px",
         "14px": "14px",
         "15px": "15px",
+        "14": "3.5rem", // 56px @ 16px base
       },
       letterSpacing: {
         "1px": "1px",
@@ -58,6 +60,7 @@ export default {
       },
       lineHeight: {
         "19": "1.188rem", // 19px @ 16px base
+        "14.5": "3.625rem", // 58px @ 16px base
       },
     },
   },
