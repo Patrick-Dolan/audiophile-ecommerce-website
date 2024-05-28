@@ -41,6 +41,7 @@ export default {
         "40": "10rem", // 160px @ 16px base
         "43": "10.75rem", // 172px @ 16px base
         "50": "12.5rem", // 200px @ 16px base
+        "56": "14rem", // 224px @ 16px base
       },
       fontSize: {
         "13": "0.8125rem", // 13px @ 16px base

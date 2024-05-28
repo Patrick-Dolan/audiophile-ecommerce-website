@@ -6,7 +6,7 @@ function MainNavLinkCard({ linkObj, handleLinkClick }) {
 
   return (
     <Link to={link} onClick={handleLinkClick}>
-      <div className="min-h-20"></div>
+      <div className="min-h-20 min-w-56"></div>
       <div className="bg-off-grey rounded-lg relative">
         <div className="min-h-14"></div>
         <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2">
