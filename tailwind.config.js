@@ -9,6 +9,7 @@ export default {
     extend: {
       backgroundImage: {
         "sm-home-hero": "url('/audiophile-ecommerce-website/home/mobile/image-header.jpg')",
+        "md-home-hero": "url('/audiophile-ecommerce-website/home/tablet/image-header.jpg')",
         "sm-featured-product": "url('/audiophile-ecommerce-website/home/desktop/pattern-circles.svg')",
         "sm-primary-product": "url('/audiophile-ecommerce-website/home/mobile/image-speaker-zx7.jpg')",
       },
@@ -42,11 +43,13 @@ export default {
         "43": "10.75rem", // 172px @ 16px base
         "50": "12.5rem", // 200px @ 16px base
         "56": "14rem", // 224px @ 16px base
+        "95": "23.75rem", // 380px @ 16px base
+        "182": "45.5rem", // 728px @ 16px base
       },
       fontSize: {
-        "13": "0.8125rem", // 13px @ 16px base
-        "14": "0.875rem", // 14px @ 16px base
-        "15": "0.938rem", // 15px @ 16px base
+        "13px": "13px",
+        "14px": "14px",
+        "15px": "15px",
       },
       letterSpacing: {
         "1px": "1px",

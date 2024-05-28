@@ -88,7 +88,7 @@ function CheckoutForm({ openOrderCompleteModal }) {
       <form onSubmit={handleSubmit} noValidate>
         <div className="mb-8 mt-6">
           <h2 className="mb-8">Checkout</h2>
-          <p className="text-primary uppercase text-13 font-bold tracking-1px mb-4">Billing Details</p>
+          <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Billing Details</p>
           <div className="space-y-6 mb-8">
             <InputField
               label="Name"
@@ -118,7 +118,7 @@ function CheckoutForm({ openOrderCompleteModal }) {
               errorMessage={errors.phone}
             />
           </div>
-          <p className="text-primary uppercase text-13 font-bold tracking-1px mb-4">Shipping info</p>
+          <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Shipping info</p>
           <div className="space-y-6 mb-8">
             <InputField
               label="Your Address"
@@ -158,7 +158,7 @@ function CheckoutForm({ openOrderCompleteModal }) {
             />
           </div>
           <div className="pb-8">
-            <p className="text-primary uppercase text-13 font-bold tracking-1px mb-4">Payment Details</p>
+            <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Payment Details</p>
             <div className="space-y-4 mb-8 flex flex-col">
               <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "e-money" ? "border-primary" : ""}`}>
                 <input type="radio" id="e-money" name="paymentType" value="e-money" className="accent-primary" onChange={handleRadioButtonClick} defaultChecked />

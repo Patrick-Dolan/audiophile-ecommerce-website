@@ -14,7 +14,7 @@ function MainNavLinkCard({ linkObj, handleLinkClick }) {
         </div>
         <h6 className="text-center text-15 lg:text-lg">{title}</h6>
         <div className="mx-auto text-center flex justify-center items-center gap-3 pb-5">
-          <p className="text-13 font-bold opacity-50">Shop</p>
+          <p className="text-13px font-bold opacity-50">Shop</p>
           <img src="/audiophile-ecommerce-website/shared/desktop/icon-arrow-right.svg" alt="Right arrow icon." />
         </div>
       </div>

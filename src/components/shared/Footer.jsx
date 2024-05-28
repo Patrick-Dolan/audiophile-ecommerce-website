@@ -13,7 +13,7 @@ function Footer() {
             <Link to="/audiophile-ecommerce-website/">
               <img src="/audiophile-ecommerce-website/shared/desktop/logo.svg" alt="audiophile logo" className="block mx-auto pt-12" />
             </Link>
-            <ul className="font-bold text-13 tracking-2px uppercase leading-normal space-y-4">
+            <ul className="font-bold text-13px tracking-2px uppercase leading-normal space-y-4">
               <li><Link to="/audiophile-ecommerce-website/">Home</Link></li>
               <li><Link to="/audiophile-ecommerce-website/category/headphones">Headphones</Link></li>
               <li><Link to="/audiophile-ecommerce-website/category/speakers">Speakers</Link></li>

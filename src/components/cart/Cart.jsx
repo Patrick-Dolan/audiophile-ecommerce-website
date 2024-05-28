@@ -43,7 +43,7 @@ function Cart({ closeCartOverlay }) {
                 <div className="flex gap-4 items-center justify-center">
                   <div className="flex gap-1 justify-center items-center bg-off-grey">
                     <button onClick={() => handleRemoveProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">-</button>
-                    <p className="font-bold text-13 tabular-nums">{product.quantity}</p>
+                    <p className="font-bold text-13px tabular-nums">{product.quantity}</p>
                     <button onClick={() => handleAddProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">+</button>
                   </div>
                 </div>
