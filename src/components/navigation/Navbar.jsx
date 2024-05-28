@@ -18,9 +18,9 @@ function Navbar() {
       }, 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollPos]);
 
@@ -30,24 +30,24 @@ function Navbar() {
   }, [location.pathname]);
 
   const openMobileNav = () => {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
     setCartOpen(false);
     setMobileNavOpen(true);
   }
 
   const closeMobileNav = () => {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
     setMobileNavOpen(false);
   }
 
   const openCart = () => {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
     setMobileNavOpen(false);
     setCartOpen(true);
   }
 
   const closeCart = () => {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
     setCartOpen(false);
   }
 
@@ -61,12 +61,12 @@ function Navbar() {
   } else {
     return (
       <>
-        <nav className={`w-full z-30 fixed ${mobileNavOpen ? "rounded-b-md" : ""} `}>
-          <div className={`flex justify-between items-center px-6 min-h-22.5 border-b border-white border-opacity-10 ${location.pathname === "/audiophile-ecommerce-website/" && scrollPos === 0 ? "bg-transparent" : "bg-black"}`}>
+        <nav className={`w-full z-30 fixed ${mobileNavOpen ? "rounded-b-md" : ""}`}>
+          <div className={`flex justify-between items-center px-6 md:px-10 min-h-22.5 border-b border-white border-opacity-10 ${location.pathname === "/audiophile-ecommerce-website/" && scrollPos === 0 ? "bg-transparent" : "bg-black"}`}>
             <button onClick={mobileNavOpen ? closeMobileNav : openMobileNav}>
               <img src="/audiophile-ecommerce-website/shared/tablet/icon-hamburger.svg" alt="Hamburger icon for navigation menu." />
             </button>
-            <Link to="/audiophile-ecommerce-website/" onClick={closeMobileNav}>
+            <Link className="md:mr-auto md:ml-10" to="/audiophile-ecommerce-website/" onClick={closeMobileNav}>
               <img src="/audiophile-ecommerce-website/shared/desktop/logo.svg" alt="audiophile logo." />
             </Link>
             <button onClick={cartOpen ? closeCart : openCart}>
@@ -80,7 +80,6 @@ function Navbar() {
       </>
     )
   }
-
 }
 
 export default Navbar
