@@ -27,7 +27,7 @@ function Cart({ closeCartOverlay }) {
       <div className="bg-white rounded-lg mt-6 py-8 px-7 flex flex-col max-h-[75vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-9">
           <h6>Cart ({cart.products.length})</h6>
-          <button className="underline opacity-50 text-15" onClick={clearCart}>Remove all</button>
+          <button className="underline opacity-50 text-15px" onClick={clearCart}>Remove all</button>
         </div>
         <div className="space-y-6 mb-8">
           {cart.products.map((product) => (
@@ -36,7 +36,7 @@ function Cart({ closeCartOverlay }) {
                 <div className="flex justify-center items-center gap-4">
                   <img src={product.image.mobile} alt={product.name} className="w-16 h-16 rounded-lg" />
                   <div>
-                    <p className="font-bold text-15">{product.shortName}</p>
+                    <p className="font-bold text-15px">{product.shortName}</p>
                     <p className="opacity-50">{formatPrice(product.price)}</p>
                   </div>
                 </div>

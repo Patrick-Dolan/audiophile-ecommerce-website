@@ -44,18 +44,18 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
                       <div className="flex justify-center items-center gap-4">
                         <img src={firstProduct.image.mobile} alt={firstProduct.name} className="w-16 h-16 rounded-lg" />
                         <div>
-                          <p className="font-bold text-15">{firstProduct.shortName}</p>
+                          <p className="font-bold text-15px">{firstProduct.shortName}</p>
                           <p className="opacity-50">{formatPrice(firstProduct.price)}</p>
                         </div>
                       </div>
-                      <p className="font-bold text-15 opacity-50">x{firstProduct.quantity}</p>
+                      <p className="font-bold text-15px opacity-50">x{firstProduct.quantity}</p>
                     </div>
                   </div>
                   <hr className="mx-6" />
                   <p className="text-center opacity-50 font-bold text-xs mt-3 mb-6">and {cart.products.length - 1} other items(s)</p>
                 </div>
                 <div className="bg-black px-6 mb-6 rounded-b-xl">
-                  <p className="uppercase opacity-50 text-15 font-medium text-white mt-4 mb-2">Grand total</p>
+                  <p className="uppercase opacity-50 text-15px font-medium text-white mt-4 mb-2">Grand total</p>
                   <h6 className="font-bold text-white text-25 mb-5">{formatPrice(cart.grandTotal)}</h6>
                 </div>
                 <Button text="Back to home" type="button" onClick={navigateToHome} />

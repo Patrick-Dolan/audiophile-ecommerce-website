@@ -162,11 +162,11 @@ function CheckoutForm({ openOrderCompleteModal }) {
             <div className="space-y-4 mb-8 flex flex-col">
               <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "e-money" ? "border-primary" : ""}`}>
                 <input type="radio" id="e-money" name="paymentType" value="e-money" className="accent-primary" onChange={handleRadioButtonClick} defaultChecked />
-                <span className="text-15 font-bold">e-Money</span>
+                <span className="text-15px font-bold">e-Money</span>
               </label>
               <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "cash" ? "border-primary" : ""}`}>
               <input type="radio" id="cash" name="paymentType" value="cash" className="accent-primary" onChange={handleRadioButtonClick} />
-                <span className="text-15 font-bold">Cash on Delivery</span>
+                <span className="text-15px font-bold">Cash on Delivery</span>
               </label>
             </div>
             {paymentType === "e-money" && (
@@ -202,11 +202,11 @@ function CheckoutForm({ openOrderCompleteModal }) {
                 <div className="flex justify-center items-center gap-4">
                   <img src={product.image.mobile} alt={product.name} className="w-16 h-16 rounded-lg" />
                   <div>
-                    <p className="font-bold text-15">{product.shortName}</p>
+                    <p className="font-bold text-15px">{product.shortName}</p>
                     <p className="opacity-50">{formatPrice(product.price)}</p>
                   </div>
                 </div>
-                <p className="font-bold text-15 opacity-50">x{product.quantity}</p>
+                <p className="font-bold text-15px opacity-50">x{product.quantity}</p>
               </div>
             </div>
           ))}

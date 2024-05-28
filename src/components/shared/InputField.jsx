@@ -4,7 +4,7 @@ function InputField({ label, name, type, placeholder, value, onChange, error, er
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
-        <label htmlFor={label} className={`text-15 font-bold ${error && "text-error"}`}>{label}</label>
+        <label htmlFor={label} className={`text-15px font-bold ${error && "text-error"}`}>{label}</label>
         {error && <p className="text-error text-xs font-medium">{errorMessage}</p>}
       </div>
       <input

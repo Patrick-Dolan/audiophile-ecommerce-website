@@ -20,7 +20,7 @@ function CheckoutPage() {
     <div>
       <ContentWrapper>
         <div className="mt-4 mb-6">
-          <button onClick={handleGoBack} className="opacity-50 text-15">Go Back</button>
+          <button onClick={handleGoBack} className="opacity-50 text-15px">Go Back</button>
         </div>
         <div className="mb-24">
           <CheckoutForm openOrderCompleteModal={handleOrderCompleteModal} />
