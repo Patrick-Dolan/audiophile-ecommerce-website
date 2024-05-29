@@ -3,23 +3,27 @@ import ContentWrapper from "./ContentWrapper"
 
 function Footer() {
   return (
-    <footer>
+    <footer className="relative">
       {/* Decorative bar */}
-      <div className="h-1 bg-black"><div className="w-25 bg-primary h-1 mx-auto"></div></div>
+      <div className="h-1 bg-black absolute top-0 left-0 right-0 z-10">
+        <div className="w-25 bg-primary h-full mx-auto md:mx-10"></div>
+      </div>
       {/* Footer content */}
-      <div className="bg-black text-white text-center pb-9.5">
+      <div className="bg-black text-white text-center pb-9.5 z-20 pt-1 md:text-left md:pb-10">
         <ContentWrapper>
-          <div className="space-y-12">
+          <div className="space-y-12 md:space-y-8">
             <Link to="/audiophile-ecommerce-website/">
-              <img src="/audiophile-ecommerce-website/shared/desktop/logo.svg" alt="audiophile logo" className="block mx-auto pt-12" />
+              <img src="/audiophile-ecommerce-website/shared/desktop/logo.svg" alt="audiophile logo" className="block mx-auto mt-12 md:mx-0 md:mt-14" />
             </Link>
-            <ul className="font-bold text-13px tracking-2px uppercase leading-normal space-y-4">
+            <ul className="font-bold text-13px tracking-2px uppercase leading-normal space-y-4 md:flex md:space-y-0 md:gap-8">
               <li><Link to="/audiophile-ecommerce-website/">Home</Link></li>
               <li><Link to="/audiophile-ecommerce-website/category/headphones">Headphones</Link></li>
               <li><Link to="/audiophile-ecommerce-website/category/speakers">Speakers</Link></li>
               <li><Link to="/audiophile-ecommerce-website/category/earphones">Earphones</Link></li>
             </ul>
             <p className="opacity-50 font-medium">Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.</p>
+          </div>
+          <div className="mt-12 space-y-12 md:flex md:justify-between md:items-center md:mt-20 md:space-y-0">
             <p className="opacity-50 font-bold">Copyright 2021. All Rights Reserved</p>
             <div className="flex justify-center items-center gap-4">
               <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
