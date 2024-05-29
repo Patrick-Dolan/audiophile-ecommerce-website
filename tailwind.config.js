@@ -49,12 +49,14 @@ export default {
         "56": "14rem", // 224px @ 16px base
         "87": "21.75rem", // 348px @ 16px base
         "95": "23.75rem", // 380px @ 16px base
+        "143": "35.75rem", // 572px @ 16px base
         "182": "45.5rem", // 728px @ 16px base
       },
       fontSize: {
         "13px": "13px",
         "14px": "14px",
         "15px": "15px",
+        "10": "2.5rem", // 40px @ 16px base
         "14": "3.5rem", // 56px @ 16px base
       },
       letterSpacing: {
