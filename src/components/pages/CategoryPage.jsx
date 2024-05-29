@@ -13,7 +13,7 @@ function CategoryPage() {
       <>
         <h2 className="bg-black text-white min-h-25.5 flex justify-center items-center">{category}</h2>
         <ContentWrapper>
-          <div className="space-y-30 mt-16">
+          <div className="space-y-30 mt-16 mb-30">
             {productsInCategory.map(product => (
               <div key={product.slug}>
                 <CategoryProductCard product={product} key={product.slug} />
