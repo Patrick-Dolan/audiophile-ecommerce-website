@@ -1,15 +1,22 @@
 import { useCartContext } from "../../context/CartContext"
 import { useNavigate } from "react-router"
-import PropTypes from 'prop-types'
+import { useState } from "react"
+import PropTypes from "prop-types"
 import Button from "../shared/Button"
 import ContentWrapper from "../shared/ContentWrapper"
 import formatPrice from "../utils/formatPrice"
 
 function Cart({ closeCartOverlay }) {
   const { cart, clearCart, addToCart, removeFromCart } = useCartContext();
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleCheckoutNavigation = () => {
+    setError(null);
+    if (cart.products.length === 0) {
+      setError("Please add products to your cart before proceeding to checkout");
+      return;
+    }
     closeCartOverlay();
     navigate("/audiophile-ecommerce-website/checkout");
   }
@@ -33,6 +40,7 @@ function Cart({ closeCartOverlay }) {
             <h6>Cart ({cart.products.length})</h6>
             <button className="underline opacity-50 text-15px" onClick={clearCart}>Remove all</button>
           </div>
+          {error && <p className="text-red-500 text-sm mb-6">{error}</p>}
           <div className="space-y-6 mb-8">
             {cart.products.map((product) => (
               <div key={product.id} className="flex justify-between items-center">
