@@ -37,6 +37,7 @@ function Navbar() {
 
   const closeMobileNav = () => {
     document.body.style.overflow = "auto";
+    closeCart();
     setMobileNavOpen(false);
   }
 
