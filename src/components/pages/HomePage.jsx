@@ -10,19 +10,21 @@ function HomePage() {
   return (
     <>
       <HomepageHero />
-      <ContentWrapper>
-        <div className="mb-22.5">
-          <NavLinks />
-        </div>
-        <div className="space-y-30 mb-30">
-          <div className="space-y-6">
-            <FeaturedProductCard />
-            <PrimaryProductCard />
-            <SecondaryProductCard />
+      <div className="md:mt-10">
+        <ContentWrapper>
+          <div className="mb-22.5">
+            <NavLinks />
           </div>
-          <MarketingCard />
-        </div>
-      </ContentWrapper>
+          <div className="space-y-30 mb-30 md:space-y-24">
+            <div className="space-y-6 md:space-y-8">
+              <FeaturedProductCard />
+              <PrimaryProductCard />
+              <SecondaryProductCard />
+            </div>
+            <MarketingCard />
+          </div>
+        </ContentWrapper>
+      </div>
     </>
   )
 }
