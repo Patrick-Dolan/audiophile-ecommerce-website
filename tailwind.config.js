@@ -15,6 +15,7 @@ export default {
       },
       backgroundPosition: {
         "sm-featured-product-pos": "50% -120px",
+        "md-featured-product-pos": "50% -315px",
       },
       backgroundSize: {
         "sm-featured-product-size": "170% auto",
@@ -30,7 +31,9 @@ export default {
       spacing: {
         "7.5": "1.875rem", // 30px @ 16px base
         "9.5": "2.375rem", // 38px @ 16px base
+        "13": "3.25rem", // 52px @ 16px base
         "14": "3.5rem", // 56px @ 16px base
+        "15": "3.75rem", // 60px @ 16px base
         "22": "5.5rem", // 88px @ 16px base
         "22.5": "5.625em", // 90px @ 16px base
         "24": "6rem", // 96px @ 16px base
