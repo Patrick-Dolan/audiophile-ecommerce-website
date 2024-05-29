@@ -15,7 +15,7 @@ export default {
       },
       backgroundPosition: {
         "sm-featured-product-pos": "50% -120px",
-        "md-featured-product-pos": "50% -315px",
+        "md-featured-product-pos": "50% -282px",
       },
       backgroundSize: {
         "sm-featured-product-size": "170% auto",
