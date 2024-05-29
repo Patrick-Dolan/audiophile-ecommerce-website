@@ -35,6 +35,7 @@ export default {
         "13": "3.25rem", // 52px @ 16px base
         "14": "3.5rem", // 56px @ 16px base
         "15": "3.75rem", // 60px @ 16px base
+        "17.5": "4.375rem", // 70px @ 16px base
         "22": "5.5rem", // 88px @ 16px base
         "22.5": "5.625em", // 90px @ 16px base
         "24": "6rem", // 96px @ 16px base
@@ -47,6 +48,7 @@ export default {
         "43": "10.75rem", // 172px @ 16px base
         "50": "12.5rem", // 200px @ 16px base
         "56": "14rem", // 224px @ 16px base
+        "70": "17.5rem", // 280px @ 16px base
         "87": "21.75rem", // 348px @ 16px base
         "95": "23.75rem", // 380px @ 16px base
         "143": "35.75rem", // 572px @ 16px base
@@ -56,6 +58,8 @@ export default {
         "13px": "13px",
         "14px": "14px",
         "15px": "15px",
+        "7": "1.75rem", // 28px @ 16px base
+        "8": "2rem", // 32px @ 16px base
         "10": "2.5rem", // 40px @ 16px base
         "14": "3.5rem", // 56px @ 16px base
       },
