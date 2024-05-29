@@ -22,13 +22,17 @@ function ProductDetailsPage() {
       <div className="mt-4 mb-6">
         <button onClick={handleGoBack} className="opacity-50 text-15px">Go Back</button>
       </div>
-      <div className="space-y-30">
+      <div className="mb-30">
         <ProductInformation product={product} />
+      </div>
+      <div className="mb-30 md:mb-10">
         <RecommendedProducts products={product.others} />
+      </div>
+      <div className="mb-30">
         <NavLinks />
-        <div className="mb-30">
-          <MarketingCard />
-        </div>
+      </div>
+      <div className="mb-30">
+        <MarketingCard />
       </div>
     </ContentWrapper>
   )
