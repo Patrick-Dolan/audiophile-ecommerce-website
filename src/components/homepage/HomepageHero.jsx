@@ -10,7 +10,7 @@ function HomepageHero() {
           <p className="text-14px uppercase leading-19 tracking-10px opacity-50 mb-4 md:mb-6">New product</p>
           <h1 className="mb-6 md:text-14 md:leading-14.5 md:mx-auto">XX99 Mark II<br /> Headphones</h1>
           <p className="opacity-75 mb-7 md:mb-10 md:max-w-87 md:mx-auto">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-          <Link to="/audiophile-ecommerce-website/product/xx99-mark-two-headphones">
+          <Link to="/audiophile-ecommerce-website/product/xx99-mark-two-headphones" className="flex justify-center">
             <Button text="See Product" type="button" />
           </Link>
         </div>

@@ -22,7 +22,7 @@ function FeaturedProductCard() {
             <h1 className="mb-6 md:text-14 md:leading-14.5">ZX9<br />Speaker</h1>
             <p className="opacity-75 mb-6 md:mb-10 md:max-w-87 md:mx-auto">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
             <div>
-              <Link to="/audiophile-ecommerce-website/product/zx9-speaker">
+              <Link to="/audiophile-ecommerce-website/product/zx9-speaker" className="flex justify-center">
                 <Button text="See Product" type="button" variant="tertiary" />
               </Link>
             </div>

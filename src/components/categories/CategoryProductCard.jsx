@@ -21,7 +21,7 @@ function CategoryProductCard({ product }) {
         <h2 className="text-center md:text-10 md:max-w-95 md:mx-auto">{product.name}</h2>
         <p className="text-center opacity-50">{product.description}</p>
         <div className="text-center">
-          <Link to={`/audiophile-ecommerce-website/product/${product.slug}`}>
+          <Link to={`/audiophile-ecommerce-website/product/${product.slug}`} className="flex justify-center">
             <Button text="See Product" type="button" />
           </Link>
         </div>
