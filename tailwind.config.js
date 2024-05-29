@@ -12,6 +12,7 @@ export default {
         "md-home-hero": "url('/audiophile-ecommerce-website/home/tablet/image-header.jpg')",
         "sm-featured-product": "url('/audiophile-ecommerce-website/home/desktop/pattern-circles.svg')",
         "sm-primary-product": "url('/audiophile-ecommerce-website/home/mobile/image-speaker-zx7.jpg')",
+        "md-primary-product": "url('/audiophile-ecommerce-website/home/tablet/image-speaker-zx7.jpg')",
       },
       backgroundPosition: {
         "sm-featured-product-pos": "50% -120px",
