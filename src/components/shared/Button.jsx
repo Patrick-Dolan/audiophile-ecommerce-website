@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function Button({ text, type, onClick, variant = "primary"}) {
+function Button({ text, type, onClick, variant = "primary", disabled = false }) {
   let styles;
 
   switch (variant) {
@@ -22,9 +22,10 @@ function Button({ text, type, onClick, variant = "primary"}) {
 
   return (
     <button 
-      className={`uppercase tracking-1px font-bold min-w-40 text-13px py-4 max-h-12 flex items-center justify-center ${styles}`} 
+      className={`uppercase tracking-1px font-bold min-w-40 text-13px py-4 max-h-12 flex items-center justify-center ${styles} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`} 
       type={type} 
       onClick={onClick}
+      disabled={disabled}
     >
       {text}
     </button>
@@ -36,6 +37,7 @@ Button.propTypes = {
   type: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   variant: PropTypes.string,
+  disabled: PropTypes.bool
 }
 
 export default Button
