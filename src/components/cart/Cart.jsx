@@ -23,41 +23,46 @@ function Cart({ closeCartOverlay }) {
   }
 
   return (
-    <ContentWrapper>
-      <div className="bg-white rounded-lg mt-6 py-8 px-7 flex flex-col max-h-[75vh] overflow-y-auto">
-        <div className="flex justify-between items-center mb-9">
-          <h6>Cart ({cart.products.length})</h6>
-          <button className="underline opacity-50 text-15px" onClick={clearCart}>Remove all</button>
-        </div>
-        <div className="space-y-6 mb-8">
-          {cart.products.map((product) => (
-            <div key={product.id} className="flex justify-between items-center">
-              <div className="flex gap-4 w-full items-center justify-between">
-                <div className="flex justify-center items-center gap-4">
-                  <img src={product.image.mobile} alt={product.name} className="w-16 h-16 rounded-lg" />
-                  <div>
-                    <p className="font-bold text-15px">{product.shortName}</p>
-                    <p className="opacity-50">{formatPrice(product.price)}</p>
+    <div onClick={closeCartOverlay}>
+      <ContentWrapper>
+        <div
+          className="bg-white rounded-lg mt-6 py-8 px-7 flex flex-col max-h-[75vh] overflow-y-auto md:max-w-95 md:ml-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex justify-between items-center mb-9">
+            <h6>Cart ({cart.products.length})</h6>
+            <button className="underline opacity-50 text-15px" onClick={clearCart}>Remove all</button>
+          </div>
+          <div className="space-y-6 mb-8">
+            {cart.products.map((product) => (
+              <div key={product.id} className="flex justify-between items-center">
+                <div className="flex gap-4 w-full items-center justify-between">
+                  <div className="flex justify-center items-center gap-4">
+                    <img src={product.image.mobile} alt={product.name} className="w-16 h-16 rounded-lg" />
+                    <div>
+                      <p className="font-bold text-15px">{product.shortName}</p>
+                      <p className="opacity-50">{formatPrice(product.price)}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4 items-center justify-center">
-                  <div className="flex gap-1 justify-center items-center bg-off-grey">
-                    <button onClick={() => handleRemoveProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">-</button>
-                    <p className="font-bold text-13px tabular-nums">{product.quantity}</p>
-                    <button onClick={() => handleAddProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">+</button>
+                  <div className="flex gap-4 items-center justify-center">
+                    <div className="flex gap-1 justify-center items-center bg-off-grey">
+                      <button onClick={() => handleRemoveProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">-</button>
+                      <p className="font-bold text-13px tabular-nums">{product.quantity}</p>
+                      <button onClick={() => handleAddProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">+</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="flex justify-between items-center mb-6 uppercase">
+            <p className="opacity-50">total</p>
+            <h6>{formatPrice(cart.subtotal)}</h6>
+          </div>
+          <Button text="Checkout" type="button" onClick={handleCheckoutNavigation} />
         </div>
-        <div className="flex justify-between items-center mb-6 uppercase">
-          <p className="opacity-50">total</p>
-          <h6>{formatPrice(cart.subtotal)}</h6>
-        </div>
-        <Button text="Checkout" type="button" onClick={handleCheckoutNavigation} />
-      </div>
-    </ContentWrapper>
+      </ContentWrapper>
+    </div>
   )
 }
 
