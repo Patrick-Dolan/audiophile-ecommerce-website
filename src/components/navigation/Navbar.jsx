@@ -75,7 +75,11 @@ function Navbar() {
             </button>
           </div>
           {mobileNavOpen && <NavLinks handleMobileNav={closeMobileNav} />}
-          {cartOpen && <Cart closeCartOverlay={handleCloseOverlays} />}
+          {cartOpen && 
+            <div className="fixed z-30 w-full">
+              <Cart closeCartOverlay={handleCloseOverlays} />
+            </div>
+          }
         </nav>
         <div onClick={handleCloseOverlays} className={`fixed inset-0 bg-black opacity-40 z-20 ${mobileNavOpen || cartOpen ? "" : "hidden"}`}></div>
       </>
