@@ -77,7 +77,6 @@ function CheckoutForm({ openOrderCompleteModal }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (cart.products.length === 0) return;
     const validForm = passesFormValidation();
     if (!validForm) return;
     openOrderCompleteModal();
@@ -87,9 +86,9 @@ function CheckoutForm({ openOrderCompleteModal }) {
     <ContentWrapper>
       <form onSubmit={handleSubmit} noValidate>
         <div className="mb-8 mt-6">
-          <h2 className="mb-8">Checkout</h2>
+          <h2 className="mb-8 md:text-8">Checkout</h2>
           <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Billing Details</p>
-          <div className="space-y-6 mb-8">
+          <div className="mb-8 grid gap-6 md:grid-cols-2">
             <InputField
               label="Name"
               name="name"
@@ -119,16 +118,18 @@ function CheckoutForm({ openOrderCompleteModal }) {
             />
           </div>
           <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Shipping info</p>
-          <div className="space-y-6 mb-8">
-            <InputField
-              label="Your Address"
-              name="address"
-              type="text"
-              placeholder="1137 Williams Avenue"
-              onChange={handleInputChange}
-              error={errors.address ? true : false}
-              errorMessage={errors.address}
-            />
+          <div className="mb-8 grid gap-6 md:grid-cols-2">
+            <div className="md:col-span-2">
+              <InputField
+                label="Your Address"
+                name="address"
+                type="text"
+                placeholder="1137 Williams Avenue"
+                onChange={handleInputChange}
+                error={errors.address ? true : false}
+                errorMessage={errors.address}
+              />
+            </div>
             <InputField
               label="ZIP Code"
               name="zip"
@@ -159,18 +160,21 @@ function CheckoutForm({ openOrderCompleteModal }) {
           </div>
           <div className="pb-8">
             <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Payment Details</p>
-            <div className="space-y-4 mb-8 flex flex-col">
-              <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "e-money" ? "border-primary" : ""}`}>
-                <input type="radio" id="e-money" name="paymentType" value="e-money" className="accent-primary" onChange={handleRadioButtonClick} defaultChecked />
-                <span className="text-15px font-bold">e-Money</span>
-              </label>
-              <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "cash" ? "border-primary" : ""}`}>
-              <input type="radio" id="cash" name="paymentType" value="cash" className="accent-primary" onChange={handleRadioButtonClick} />
-                <span className="text-15px font-bold">Cash on Delivery</span>
-              </label>
+            <div className="md:grid md:grid-cols-2 md:gap-6">
+              <p className="text-12px font-bold mb-4">Payment Method</p>
+              <div className="space-y-4 mb-8 flex flex-col">
+                <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "e-money" ? "border-primary" : ""}`}>
+                  <input type="radio" id="e-money" name="paymentType" value="e-money" className="accent-primary" onChange={handleRadioButtonClick} defaultChecked />
+                  <span className="text-15px font-bold">e-Money</span>
+                </label>
+                <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "cash" ? "border-primary" : ""}`}>
+                <input type="radio" id="cash" name="paymentType" value="cash" className="accent-primary" onChange={handleRadioButtonClick} />
+                  <span className="text-15px font-bold">Cash on Delivery</span>
+                </label>
+              </div>
             </div>
             {paymentType === "e-money" && (
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-8 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
                 <InputField
                   label="e-Money Number"
                   name="eMoneyNumber"
@@ -232,7 +236,7 @@ function CheckoutForm({ openOrderCompleteModal }) {
             </div>
           </div>
           <div className="flex flex-col mt-8">
-            <Button text="continue & pay" type="submit" />
+            <Button text="continue & pay" type="submit" disabled={cart.products.length === 0} />
           </div>
         </div>
       </form>

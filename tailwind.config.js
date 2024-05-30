@@ -55,6 +55,7 @@ export default {
         "182": "45.5rem", // 728px @ 16px base
       },
       fontSize: {
+        "12px": "12px",
         "13px": "13px",
         "14px": "14px",
         "15px": "15px",
