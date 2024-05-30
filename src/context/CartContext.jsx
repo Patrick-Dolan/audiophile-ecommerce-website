@@ -6,7 +6,6 @@ const CartContext = createContext(null)
 
 export const CartContextProvider = ({ children }) => {
   const [cart, dispatch] = useReducer(cartReducer, createInitialCartState());
-  console.log(cart);
 
   function addToCart(product, quantity = 1) {
     const action = actions.addProductToCart(product, quantity);
