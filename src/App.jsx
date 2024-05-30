@@ -9,7 +9,7 @@ import CheckoutPage from "./components/pages/CheckoutPage";
 function App() {
   const location = useLocation();
   const NavbarSpacer = () => (
-    location.pathname !== "/audiophile-ecommerce-website/" && <div className="min-h-22.5"></div>
+    location.pathname !== "/audiophile-ecommerce-website/" && <div className="min-h-22.5 bg-black"></div>
   );
 
   return (
