@@ -3,11 +3,10 @@ import { useNavigate } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import PropTypes from "prop-types"
 import Button from "../shared/Button"
-import ContentWrapper from "../shared/ContentWrapper"
 import formatPrice from "../utils/formatPrice"
 
 function OrderCompleteModal({ modalOpen, setModalOpen }) {
-  const { cart } = useCartContext();
+  const { cart, clearCart } = useCartContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,6 +22,7 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
   const navigateToHome = () => {
     document.body.style.overflow = 'auto';
     setModalOpen(false);
+    clearCart();
     navigate("/audiophile-ecommerce-website/");
   }
 
