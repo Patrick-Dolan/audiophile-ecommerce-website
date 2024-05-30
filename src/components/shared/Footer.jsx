@@ -5,8 +5,8 @@ function Footer() {
   return (
     <footer className="relative">
       {/* Decorative bar */}
-      <div className="h-1 bg-black absolute top-0 left-0 right-0 z-10">
-        <div className="w-25 bg-primary h-full mx-auto md:mx-10"></div>
+      <div className="h-1 bg-black absolute top-0 left-0 right-0 z-10 md:max-w-196.5 md:mx-auto lg:max-w-277.25">
+        <div className="w-25 bg-primary h-full mx-auto md:mx-10 lg:mx-0"></div>
       </div>
       {/* Footer content */}
       <div className="bg-black text-white text-center pb-9.5 z-20 pt-1 md:text-left md:pb-10">
