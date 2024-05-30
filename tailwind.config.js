@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "lg": "1440px",
+      },
       backgroundImage: {
         "sm-home-hero": "url('/audiophile-ecommerce-website/home/mobile/image-header.jpg')",
         "md-home-hero": "url('/audiophile-ecommerce-website/home/tablet/image-header.jpg')",
@@ -54,6 +57,8 @@ export default {
         "95": "23.75rem", // 380px @ 16px base
         "143": "35.75rem", // 572px @ 16px base
         "182": "45.5rem", // 728px @ 16px base
+        "196.5": "49.125rem", // 786px @ 16px base
+        "277.25": "69.313rem", // 1109px @ 16px base
       },
       fontSize: {
         "12px": "12px",

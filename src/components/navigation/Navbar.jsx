@@ -62,8 +62,8 @@ function Navbar() {
   } else {
     return (
       <>
-        <nav className={`w-full z-30 fixed ${mobileNavOpen ? "rounded-b-md" : ""}`}>
-          <div className={`flex justify-between items-center px-6 md:px-10 min-h-22.5 border-b border-white border-opacity-10 ${location.pathname === "/audiophile-ecommerce-website/" && scrollPos === 0 ? "bg-transparent" : "bg-black"}`}>
+        <nav className={`w-full z-30 fixed border-b border-white border-opacity-10 ${mobileNavOpen ? "rounded-b-md" : ""}`}>
+          <div className={`flex justify-between items-center px-6 md:px-10 min-h-22.5 lg:max-w-277.25 lg:mx-auto ${location.pathname === "/audiophile-ecommerce-website/" && scrollPos === 0 ? "bg-transparent" : "bg-black"}`}>
             <button onClick={mobileNavOpen ? closeMobileNav : openMobileNav}>
               <img src="/audiophile-ecommerce-website/shared/tablet/icon-hamburger.svg" alt="Hamburger icon for navigation menu." />
             </button>
