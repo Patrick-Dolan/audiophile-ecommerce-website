@@ -19,19 +19,19 @@ function ProductDetailsPage() {
 
   return (
     <ContentWrapper>
-      <div className="mt-4 mb-6">
-        <button onClick={handleGoBack} className="opacity-50 text-15px">Go Back</button>
+      <div className="mt-4 mb-6 md:mt-8 lg:mt-20 lg:mb-14">
+        <button onClick={handleGoBack} className="opacity-50 text-15px hover:opacity-100 hover:text-primary hover:font-medium">Go Back</button>
       </div>
-      <div className="mb-30">
+      <div className="mb-30 lg:mb-40">
         <ProductInformation product={product} />
       </div>
-      <div className="mb-30 md:mb-10">
+      <div className="mb-30 md:mb-10 lg:mb-30">
         <RecommendedProducts products={product.others} />
       </div>
-      <div className="mb-30">
+      <div className="mb-30 lg:mb-40">
         <NavLinks />
       </div>
-      <div className="mb-30">
+      <div className="mb-30 lg:mb-40">
         <MarketingCard />
       </div>
     </ContentWrapper>
