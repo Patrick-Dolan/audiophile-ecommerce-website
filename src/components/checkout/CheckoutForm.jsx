@@ -8,6 +8,7 @@ import formatPrice from "../utils/formatPrice";
 
 function CheckoutForm({ openOrderCompleteModal }) {
   const { cart } = useCartContext();
+  const [submitText, setSubmitText] = useState("continue & pay");
   const [paymentType, setPaymentType] = useState("e-money");
   const [form, setForm] = useState({
     name: "",
@@ -84,8 +85,8 @@ function CheckoutForm({ openOrderCompleteModal }) {
 
   return (
     <ContentWrapper>
-      <form onSubmit={handleSubmit} noValidate>
-        <div className="mb-8 mt-6">
+      <form onSubmit={handleSubmit} className="lg:flex lg:justify-between lg:items-start" noValidate>
+        <div className="mb-8 mt-6 lg:w-182 lg:bg-white lg:rounded-xl lg:px-12 lg:pb-12 lg:pt-13 lg:mt-0">
           <h2 className="mb-8 md:text-8">Checkout</h2>
           <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Billing Details</p>
           <div className="mb-8 grid gap-6 md:grid-cols-2">
@@ -163,11 +164,11 @@ function CheckoutForm({ openOrderCompleteModal }) {
             <div className="md:grid md:grid-cols-2 md:gap-6">
               <p className="text-12px font-bold mb-4">Payment Method</p>
               <div className="space-y-4 mb-8 flex flex-col">
-                <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "e-money" ? "border-primary" : ""}`}>
+                <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center hover:cursor-pointer hover:border-primary ${paymentType === "e-money" ? "border-primary" : ""}`}>
                   <input type="radio" id="e-money" name="paymentType" value="e-money" className="accent-primary" onChange={handleRadioButtonClick} defaultChecked />
                   <span className="text-15px font-bold">e-Money</span>
                 </label>
-                <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center ${paymentType === "cash" ? "border-primary" : ""}`}>
+                <label className={`pl-4 min-h-14 flex gap-4 border rounded-lg items-center hover:cursor-pointer hover:border-primary ${paymentType === "cash" ? "border-primary" : ""}`}>
                 <input type="radio" id="cash" name="paymentType" value="cash" className="accent-primary" onChange={handleRadioButtonClick} />
                   <span className="text-15px font-bold">Cash on Delivery</span>
                 </label>
@@ -197,7 +198,7 @@ function CheckoutForm({ openOrderCompleteModal }) {
             )}
           </div>
         </div>
-        <div className="my-8">
+        <div className="my-8 lg:bg-white lg:rounded-xl lg:p-8 lg:min-w-87 lg:my-0">
           <h6 className="mb-8">Summary</h6>
           <div className="space-y-6 mb-8">
           {cart.products.map((product) => (
@@ -235,8 +236,16 @@ function CheckoutForm({ openOrderCompleteModal }) {
               <h6 className="font-bold text-primary">{formatPrice(cart.grandTotal)}</h6>
             </div>
           </div>
-          <div className="flex flex-col mt-8">
-            <Button text="continue & pay" type="submit" disabled={cart.products.length === 0} />
+          <div 
+            className="flex flex-col mt-8" 
+            onMouseEnter={() => setSubmitText("continue")} 
+            onMouseLeave={() => setSubmitText("continue & pay")}
+          >
+            <Button 
+              text={submitText}
+              type="submit" 
+              disabled={cart.products.length === 0} 
+            />
           </div>
         </div>
       </form>
