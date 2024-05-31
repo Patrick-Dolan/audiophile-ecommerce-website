@@ -21,6 +21,7 @@ export default {
       backgroundPosition: {
         "sm-featured-product-pos": "50% -120px",
         "md-featured-product-pos": "50% -282px",
+        "lg-featured-product-pos": "-165px -10px",
       },
       backgroundSize: {
         "sm-featured-product-size": "170% auto",
@@ -48,7 +49,10 @@ export default {
         "27": "6.75rem", // 108px @ 16px base
         "28": "7rem", // 112px @ 16px base
         "30": "7.5rem", // 120px @ 16px base
+        "31": "7.75rem", // 124px @ 16px base
         "32": "8rem", // 128px @ 16px base
+        "33": "8.25rem", // 132px @ 16px base
+        "34": "8.5rem", // 136px @ 16px base
         "35": "8.75rem", // 140px @ 16px base
         "40": "10rem", // 160px @ 16px base
         "42": "10.5rem", // 168px @ 16px base
