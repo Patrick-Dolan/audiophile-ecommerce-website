@@ -15,7 +15,8 @@ function InputField({ label, name, type, placeholder, value, onChange, error, er
         value={value}
         onChange={onChange}
         min={min ? min : 0}
-        className={`p-4 border border-opacity-50 rounded-lg focus:outline-none focus:border-primary cursor-pointer ${error && "border-error border-2"}`}
+        className={`p-4 border border-opacity-50 rounded-lg hover:border-primary focus:outline-none focus:border-primary cursor-pointer ${error && "border-error border-2"}`}
+        style={{ caretColor: "#D87D4A" }}
       />
     </div>
   )
