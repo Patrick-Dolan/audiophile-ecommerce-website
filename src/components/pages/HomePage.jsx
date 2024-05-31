@@ -15,8 +15,8 @@ function HomePage() {
           <div className="mb-22.5 lg:mb-42">
             <NavLinks />
           </div>
-          <div className="space-y-30 mb-30 md:space-y-24">
-            <div className="space-y-6 md:space-y-8">
+          <div className="space-y-30 mb-30 md:space-y-24 lg:mb-50 lg:space-y-50">
+            <div className="space-y-6 md:space-y-8 lg:space-y-12">
               <FeaturedProductCard />
               <PrimaryProductCard />
               <SecondaryProductCard />
