@@ -61,6 +61,8 @@ export default {
         "43": "10.75rem", // 172px @ 16px base
         "50": "12.5rem", // 200px @ 16px base
         "56": "14rem", // 224px @ 16px base
+        "60": "15rem", // 240px @ 16px base
+        "61.5": "15.375rem", // 246px @ 16px base
         "70": "17.5rem", // 280px @ 16px base
         "87": "21.75rem", // 348px @ 16px base
         "95": "23.75rem", // 380px @ 16px base

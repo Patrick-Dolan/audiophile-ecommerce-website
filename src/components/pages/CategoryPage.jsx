@@ -11,12 +11,12 @@ function CategoryPage() {
 
   return (
       <>
-        <h2 className="bg-black text-white min-h-25.5 flex justify-center items-center">{category}</h2>
+        <h2 className="bg-black text-white min-h-25.5 flex justify-center items-center md:min-h-61.5 lg:min-h-60">{category}</h2>
         <ContentWrapper>
-          <div className="space-y-30 mt-16 mb-30">
-            {productsInCategory.map(product => (
+          <div className="space-y-30 mt-16 mb-30 md:mt-30 lg:mt-40 lg:space-y-40">
+            {productsInCategory.map((product, index) => (
               <div key={product.slug}>
-                <CategoryProductCard product={product} key={product.slug} />
+                <CategoryProductCard product={product} rowReverse={index % 2 !== 0} key={product.slug} />
               </div>
             ))}
             <NavLinks />
