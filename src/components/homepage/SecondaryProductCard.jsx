@@ -15,7 +15,7 @@ function SecondaryProductCard() {
     <article className="grid grid-cols-1 md:grid-cols-2 gap-3">
       <img src={imageUrl} alt="YX1 Earphones" className="rounded-lg w-full"/>
       <div className="min-h-50 bg-off-grey rounded-lg md:min-h-0">
-        <div className="mx-6 md:mx-10">
+        <div className="mx-6 md:mx-10 lg:mx-24">
           <div className="space-y-8 py-10 md:py-25">
             <h2>YX1 Earphones</h2>
             <div>
