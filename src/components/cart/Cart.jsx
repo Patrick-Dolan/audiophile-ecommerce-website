@@ -38,7 +38,7 @@ function Cart({ closeCartOverlay }) {
         >
           <div className="flex justify-between items-center mb-9">
             <h6>Cart ({cart.products.length})</h6>
-            <button className="underline opacity-50 text-15px" onClick={clearCart}>Remove all</button>
+            <button className="underline opacity-50 text-15px hover:opacity-100 hover:text-primary hover:font-medium" onClick={clearCart}>Remove all</button>
           </div>
           {error && <p className="text-red-500 text-sm mb-6">{error}</p>}
           <div className="space-y-6 mb-8">
@@ -54,9 +54,9 @@ function Cart({ closeCartOverlay }) {
                   </div>
                   <div className="flex gap-4 items-center justify-center">
                     <div className="flex gap-1 justify-center items-center bg-off-grey">
-                      <button onClick={() => handleRemoveProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">-</button>
+                      <button onClick={() => handleRemoveProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold hover:opacity-100 hover:text-primary">-</button>
                       <p className="font-bold text-13px tabular-nums">{product.quantity}</p>
-                      <button onClick={() => handleAddProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold">+</button>
+                      <button onClick={() => handleAddProduct(product)} className="px-4 py-2 h-full opacity-25 font-bold hover:opacity-100 hover:text-primary">+</button>
                     </div>
                   </div>
                 </div>
