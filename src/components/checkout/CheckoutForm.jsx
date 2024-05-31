@@ -86,7 +86,7 @@ function CheckoutForm({ openOrderCompleteModal }) {
   return (
     <ContentWrapper>
       <form onSubmit={handleSubmit} className="lg:flex lg:justify-between lg:items-start" noValidate>
-        <div className="mb-8 mt-6 lg:w-182 lg:bg-white lg:rounded-xl lg:px-12 lg:pb-12 lg:pt-13 lg:mt-0">
+        <div className="mb-8 mt-6 md:pt-7.5 lg:w-182 lg:bg-white lg:rounded-xl lg:px-12 lg:pb-12 lg:pt-13 lg:mt-0">
           <h2 className="mb-8 md:text-8">Checkout</h2>
           <p className="text-primary uppercase text-13px font-bold tracking-1px mb-4">Billing Details</p>
           <div className="mb-8 grid gap-6 md:grid-cols-2">
