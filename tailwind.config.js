@@ -42,6 +42,7 @@ export default {
         "14": "3.5rem", // 56px @ 16px base
         "15": "3.75rem", // 60px @ 16px base
         "17.5": "4.375rem", // 70px @ 16px base
+        "18": "4.5rem", // 72px @ 16px base
         "22": "5.5rem", // 88px @ 16px base
         "22.5": "5.625em", // 90px @ 16px base
         "24": "6rem", // 96px @ 16px base
@@ -63,6 +64,7 @@ export default {
         "70": "17.5rem", // 280px @ 16px base
         "87": "21.75rem", // 348px @ 16px base
         "95": "23.75rem", // 380px @ 16px base
+        "135": "33.75rem", // 540px @ 16px base
         "143": "35.75rem", // 572px @ 16px base
         "182": "45.5rem", // 728px @ 16px base
         "196.5": "49.125rem", // 786px @ 16px base
