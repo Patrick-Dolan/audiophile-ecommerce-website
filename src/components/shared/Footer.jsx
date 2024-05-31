@@ -12,7 +12,7 @@ function Footer() {
         <div className="w-25 bg-primary h-full mx-auto md:mx-10 lg:mx-0"></div>
       </div>
       {/* Footer content */}
-      <div className="bg-black text-white text-center pb-9.5 z-20 pt-1 md:text-left md:pb-10">
+      <div className="bg-black text-white text-center pb-9.5 z-20 pt-1 md:text-left md:pb-10 lg:pb-12">
         <ContentWrapper>
           <div className="space-y-12 md:space-y-8">
             <div className="space-y-12 md:space-y-8 lg:space-y-0 lg:flex lg:items-center lg:justify-between lg:mt-18">
