@@ -48,8 +48,10 @@ export default {
         "27": "6.75rem", // 108px @ 16px base
         "28": "7rem", // 112px @ 16px base
         "30": "7.5rem", // 120px @ 16px base
+        "32": "8rem", // 128px @ 16px base
         "35": "8.75rem", // 140px @ 16px base
         "40": "10rem", // 160px @ 16px base
+        "42": "10.5rem", // 168px @ 16px base
         "43": "10.75rem", // 172px @ 16px base
         "50": "12.5rem", // 200px @ 16px base
         "56": "14rem", // 224px @ 16px base

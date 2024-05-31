@@ -10,9 +10,9 @@ function HomePage() {
   return (
     <>
       <HomepageHero />
-      <div className="md:mt-10">
+      <div className="md:mt-10 lg:mt-30">
         <ContentWrapper>
-          <div className="mb-22.5">
+          <div className="mb-22.5 lg:mb-42">
             <NavLinks />
           </div>
           <div className="space-y-30 mb-30 md:space-y-24">
