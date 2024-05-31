@@ -13,6 +13,7 @@ export default {
       backgroundImage: {
         "sm-home-hero": "url('/audiophile-ecommerce-website/home/mobile/image-header.jpg')",
         "md-home-hero": "url('/audiophile-ecommerce-website/home/tablet/image-header.jpg')",
+        "lg-home-hero": "url('/audiophile-ecommerce-website/home/desktop/image-hero.jpg')",
         "sm-featured-product": "url('/audiophile-ecommerce-website/home/desktop/pattern-circles.svg')",
         "sm-primary-product": "url('/audiophile-ecommerce-website/home/mobile/image-speaker-zx7.jpg')",
         "md-primary-product": "url('/audiophile-ecommerce-website/home/tablet/image-speaker-zx7.jpg')",
