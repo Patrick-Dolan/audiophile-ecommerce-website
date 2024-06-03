@@ -1,6 +1,8 @@
 # THIS CHALLENGE IS STILL IN PROGRESS
 # Frontend Mentor - Audiophile e-commerce website solution
 
+<!-- TODO add known bugs section and add that you can tab focus behind modals -->
+
 This is a solution to the [Audiophile e-commerce website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
@@ -40,20 +42,17 @@ Users should be able to:
 
 <details open>
   <summary>Desktop Version</summary>
-  To be added...
-  <!-- <img src="./previews/Desktop.gif" alt="Desktop Version"> -->
+  <img src="./previews/Desktop.gif" alt="Desktop Version">
 </details>
 
 <details>
   <summary>Tablet Version</summary>
-  To be added...
-  <!-- <img src="./previews/Tablet.gif" alt="Tablet Version" height="500"> -->
+  <img src="./previews/Tablet.gif" alt="Tablet Version" height="500">
 </details>
 
 <details>
   <summary>Mobile Version</summary>
-  To be added...
-  <!-- <img src="./previews/Mobile.gif" alt="Mobile Version" height="500"> -->
+  <img src="./previews/Mobile.gif" alt="Mobile Version" height="500">
 </details>
 
 ### Links
