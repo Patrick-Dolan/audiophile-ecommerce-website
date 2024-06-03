@@ -1,7 +1,4 @@
-# THIS CHALLENGE IS STILL IN PROGRESS
 # Frontend Mentor - Audiophile e-commerce website solution
-
-<!-- TODO add known bugs section and add that you can tab focus behind modals -->
 
 This is a solution to the [Audiophile e-commerce website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -15,9 +12,8 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
 - [Testing](#testing)
 - [My process](#my-process)
   - [Built with](#built-with)
-  <!-- - [What I learned](#what-i-learned) -->
-  <!-- - [Continued development](#continued-development) -->
-  <!-- - [Useful resources](#useful-resources) -->
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 - [Known bugs](#known-bugs)
 - [Author](#author)
 
@@ -36,8 +32,7 @@ Users should be able to:
 - See correct checkout totals depending on the products in the cart
   - Shipping always adds $50 to the order
   - VAT is calculated as 20% of the product total, excluding shipping
-- See an order confirmation modal after checking out with an order summary
-- **Bonus**: Keep track of what's in the cart, even after refreshing the browser (`localStorage` could be used for this if you're not building out a full-stack app)
+- See an order confirmation modal after checking out with an order summary  
 
 ### Previews
 
@@ -132,41 +127,52 @@ npm run test
 - [Jest](https://jestjs.io/) - JS testing framework
 - [TailwindCSS](https://tailwindcss.com/) - CSS Framework
 - [Vite](https://vitejs.dev/) - Frontend Tooling
-- [Git](https://www.git-scm.com/)
-- [Node](https://nodejs.org/en)
+- [Git](https://www.git-scm.com/) - Version control
+- [Node](https://nodejs.org/en) - JavaScript runtime environment
 
-<!-- ### What I learned
+### What I learned
 
-Use this section to recap some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your knowledge.
+**Testing**
 
-To see how you can add code snippets, see below:
+Throughout the development of this project, I gained a deeper understanding of testing in a JavaScript environment. Specifically, I learned how to:
 
-```HTML
-<h1>Some HTML code I'm proud of</h1>
-```
+* Set up a testing framework: I chose Jest for this project and learned how to configure it to work seamlessly with Vite.
 
-``` js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+* Write unit tests: I created a variety of tests to ensure the correctness of my code, focusing on reducer functions.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+**Using the `useReducer` hook**
 
-**Note: Delete this note and the content within this section and replace them with your learnings.** -->
+In this project, I opted to use the `useReducer` hook for state management instead of a library like Redux since I only needed it for a cart system. I learned more about:
 
-<!-- ### Continued development
+* Understanding of reducers: I deepened my understanding of reducers and how they work, which improved my overall state management skills.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+* Cleaner code: Using useReducer led to cleaner and more readable code, as I avoided the boilerplate often associated with Redux.
 
-**Note: Delete this note and the content within this section and replace them with your plans for continued development.** -->
+**Using `useContext` for Cart System**
 
-<!-- ### Useful resources
+Since this project is an e-commerce site, I utilized the `useContext` hook to create a cart system. Through this implementation, I learned how to:
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article that helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+* Share state globally: useContext enabled me to share state across multiple components without the need for prop drilling, simplifying the state management for the cart.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.** -->
+* Combine with useReducer: I effectively combined useContext with useReducer to manage the cart's state in a centralized and efficient manner.
+
+* Manage complex state: Implementing the cart system helped me understand how to handle complex state logic, including adding, removing, and updating items in the cart.
+
+* Improve user experience: By maintaining a global cart state, I provided a consistent and seamless user experience throughout the e-commerce site.
+
+### Continued development
+
+As I continue honing my development abilities, there are several areas I want to continue focusing on to refine my skills and build more robust applications.
+
+**Improving my use of `useReducer` with `useContext`**
+* Deepening: Integration: I aim to further improve my use of the `useReducer` hook in combination with `useContext` for managing complex state across my applications. This includes:
+  * Reusable contexts: Creating more reusable and modular context and reducer setups that can be easily integrated into different projects.
+  * Performance optimization: Ensuring that my state management solutions are optimized for performance, especially in larger applications.
+
+**Improving Accessibility Skills**
+* Inclusive design: I plan to put a stronger emphasis on accessibility in my future projects to ensure that my applications are usable by as many people as possible.
+ * ARIA roles and attributes: Gaining a better understanding of ARIA (Accessible Rich Internet Applications) roles and attributes to enhance the accessibility of interactive components.
+* Keyboard navigation: Ensuring that all features of my applications are fully operable using only a keyboard.
 
 ## Known bugs
 
