@@ -137,7 +137,7 @@ npm run test
 
 Throughout the development of this project, I gained a deeper understanding of testing in a JavaScript environment. Specifically, I learned how to:
 
-* Set up a testing framework: I chose Jest for this project and learned how to configure it to work seamlessly with Vite.
+* Set up Jest to work in Vite: I chose Jest for this project and learned how to configure it to work seamlessly with Vite.
 
 * Write unit tests: I created a variety of tests to ensure the correctness of my code, focusing on reducer functions.
 
@@ -147,15 +147,15 @@ In this project, I opted to use the `useReducer` hook for state management inste
 
 * Understanding of reducers: I deepened my understanding of reducers and how they work, which improved my overall state management skills.
 
-* Cleaner code: Using useReducer led to cleaner and more readable code, as I avoided the boilerplate often associated with Redux.
+* Cleaner code: Using `useReducer` led to cleaner and more readable code, as I avoided the boilerplate often associated with Redux.
 
 **Using `useContext` for Cart System**
 
 Since this project is an e-commerce site, I utilized the `useContext` hook to create a cart system. Through this implementation, I learned how to:
 
-* Share state globally: useContext enabled me to share state across multiple components without the need for prop drilling, simplifying the state management for the cart.
+* Share state globally: `useContext` enabled me to share state across multiple components without the need for prop drilling, simplifying the state management for the cart.
 
-* Combine with useReducer: I effectively combined useContext with useReducer to manage the cart's state in a centralized and efficient manner.
+* Combine with `useReducer`: I effectively combined `useContext` with `useReducer` to manage the cart's state in a centralized and efficient manner.
 
 * Manage complex state: Implementing the cart system helped me understand how to handle complex state logic, including adding, removing, and updating items in the cart.
 
