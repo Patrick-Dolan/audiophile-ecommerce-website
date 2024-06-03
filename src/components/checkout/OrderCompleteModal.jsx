@@ -30,7 +30,7 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
 
   return (
     <div className={`${modalOpen ? "" : "hidden"}`}>
-      <div className="bg-white rounded-lg py-8 max-h-[75vh] overflow-y-auto fixed top-20 left-6 right-6 z-40 md:py-12 md:left-28 md:right-28">
+      <div className="bg-white rounded-lg py-8 max-h-[75vh] max-w- overflow-y-auto fixed top-20 left-6 right-6 z-40 md:py-12 md:left-28 md:right-28 md:top-48 md:max-h-50vh lg:top-36 lg:right-[30%] lg:left-[30%]">
         <div className="mx-6 md:mx-12">
           {firstProduct !== undefined 
             ? (
@@ -55,9 +55,9 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
                     <hr className="mx-6" />
                     <p className="text-center opacity-50 font-bold text-xs mt-3 pb-6 md:pb-0">and {cart.products.length - 1} other items(s)</p>
                   </div>
-                  <div className="bg-black px-6 mb-6 rounded-b-xl md:w-2/5 md:h-35 md:rounded-bl-none md:rounded-tr-xl md:mb-0">
+                  <div className="bg-black px-6 mb-6 rounded-b-xl md:w-2/5 md:h-35 md:rounded-bl-none md:rounded-tr-xl md:mb-0 md:flex md:flex-col md:justify-end">
                     <p className="uppercase opacity-50 text-15px font-medium text-white pt-4 mb-2">Grand total</p>
-                    <h6 className="font-bold text-white text-25 pb-5">{formatPrice(cart.grandTotal)}</h6>
+                    <h6 className="font-bold text-white text-25 pb-5 md:pb-10">{formatPrice(cart.grandTotal)}</h6>
                   </div>
                 </div>
                 <Button text="Back to home" type="button" onClick={navigateToHome} />
