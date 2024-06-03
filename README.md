@@ -59,6 +59,7 @@ Users should be able to:
 ### Setup and installation instructions
 
 **Step 1: Prerequisites**  
+
 Before you start, ensure you have the following installed on your machine:
 * **Git**: For cloning the repository.
 * **Node.js** and **npm**: For installing and managing dependencies. You can download Node.js (which includes npm) from [nodejs.org](https://nodejs.org/en).
