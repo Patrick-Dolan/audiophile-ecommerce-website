@@ -11,12 +11,19 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (modalOpen) {
-      document.body.style.overflow = `hidden`;
-    }
+    const preventScroll = (e) => {
+      if (modalOpen) {
+        e.preventDefault();
+      }
+    };
+  
+    window.addEventListener("wheel", preventScroll, { passive: false });
+    window.addEventListener("touchmove", preventScroll, { passive: false });
   
     return () => {
-      document.body.style.overflow = `auto`;
+      window.removeEventListener("wheel", preventScroll);
+      window.removeEventListener("touchmove", preventScroll);
+      document.body.style.overflow = "auto";
     };
   }, [modalOpen]);
 
