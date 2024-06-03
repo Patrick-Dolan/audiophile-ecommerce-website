@@ -18,6 +18,7 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
   <!-- - [What I learned](#what-i-learned) -->
   <!-- - [Continued development](#continued-development) -->
   <!-- - [Useful resources](#useful-resources) -->
+- [Known bugs](#known-bugs)
 - [Author](#author)
 
 ## Overview
@@ -62,11 +63,64 @@ Users should be able to:
 
 ### Setup and installation instructions
 
-ADD SETUP IN AND INSTALL INSTRUCTIONS
+**Step 1: Prerequisites**  
+Before you start, ensure you have the following installed on your machine:
+* **Git**: For cloning the repository.
+* **Node.js** and **npm**: For installing and managing dependencies. You can download Node.js (which includes npm) from [nodejs.org](https://nodejs.org/en).
+
+**Step 2: Clone the Repository**  
+
+1. Open your terminal or command prompt.
+2. Navigate to the directory where you want to clone the project.
+3. Run the following command to clone the repository.
+
+```sh
+git clone https://github.com/Patrick-Dolan/audiophile-ecommerce-website
+```
+
+**Step 3: Navigating to the Project Directory**  
+
+After cloning the repository, navigate to the project directory:
+
+```sh
+cd audiophile-ecommerce-site
+```
+
+**Step 4: Installing Dependencies**  
+
+In the project directory, install the project's dependencies using npm:
+
+```sh
+npm install
+```
+
+This command reads the package.json file and installs all the required dependencies for the project.
+
+**Step 5: Running the Project**  
+
+Once the dependencies are installed, you can start the development server using Vite. Run the following command:
+
+```sh
+npm run dev
+```
+
+This command will start the Vite development server, and you should see an output indicating that the server is running. By default, Vite serves the project on `http://localhost:3000`.
+
 
 ### Testing
 
-ADD TESTING INSTRUCTIONS
+**Step 1: Prerequisites**  
+
+Download and set up the project using the instructions in the [setup and installation instructions](#setup-and-installation-instructions) if you haven't already. 
+
+**Step 2: Run tests**  
+
+In the project directory run the following command to run the tests:
+
+```sh
+npm run test
+```
+
 
 ## My process
 
@@ -78,6 +132,8 @@ ADD TESTING INSTRUCTIONS
 - [Jest](https://jestjs.io/) - JS testing framework
 - [TailwindCSS](https://tailwindcss.com/) - CSS Framework
 - [Vite](https://vitejs.dev/) - Frontend Tooling
+- [Git](https://www.git-scm.com/)
+- [Node](https://nodejs.org/en)
 
 <!-- ### What I learned
 
@@ -111,6 +167,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [Example resource 2](https://www.example.com) - This is an amazing article that helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.** -->
+
+## Known bugs
+
+- When a modal is open, you can still use the `tab` key to focus on elements in the background.
 
 ## Author
 
