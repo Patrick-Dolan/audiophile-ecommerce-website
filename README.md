@@ -52,8 +52,7 @@ Users should be able to:
 </details>
 
 ### Links
-<!-- TODO add solution URL from Frontend mentor -->
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
+- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/audiophile-ecommerce-site-with-react-tailwindcss-and-jest-KbrZ5SRtXE)
 - Live Site URL: [GitHub Pages Live Site](https://patrick-dolan.github.io/audiophile-ecommerce-website/)
 
 ### Setup and installation instructions
