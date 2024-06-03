@@ -11,18 +11,13 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const preventScroll = (e) => {
-      if (modalOpen) {
-        e.preventDefault();
-      }
-    };
-  
-    window.addEventListener("wheel", preventScroll, { passive: false });
-    window.addEventListener("touchmove", preventScroll, { passive: false });
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   
     return () => {
-      window.removeEventListener("wheel", preventScroll);
-      window.removeEventListener("touchmove", preventScroll);
       document.body.style.overflow = "auto";
     };
   }, [modalOpen]);
