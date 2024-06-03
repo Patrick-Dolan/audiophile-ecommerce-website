@@ -27,13 +27,11 @@ function OrderCompleteModal({ modalOpen, setModalOpen }) {
     navigate("/audiophile-ecommerce-website/");
   }
 
-  const firstProduct = cart.products[0];
-
   return (
     <div className={`${modalOpen ? "" : "hidden"}`}>
       <div className="bg-white rounded-lg py-8 max-h-[75vh] overflow-y-auto fixed top-20 left-6 right-6 z-40 md:py-12 md:left-28 md:right-28 md:top-48 md:max-h-50vh lg:top-36 lg:right-[30%] lg:left-[30%]">
         <div className="mx-6 md:mx-12">
-          {firstProduct !== undefined 
+          {cart.products.length > 0 
             ? (
               <div className="flex flex-col">
                 <img src="/audiophile-ecommerce-website/checkout/icon-order-confirmation.svg" alt="" className="h-16 w-16 mb-6 md:mb-8" />
